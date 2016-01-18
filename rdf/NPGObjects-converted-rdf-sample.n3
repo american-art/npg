@@ -1,0 +1,118 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://americanartcollaborative.org/npg/object/13> a crm:E22_Man-Made_Object ;
+    crm:P108i_was_produced_by <http://americanartcollaborative.org/npg/object/13/production> ;
+    crm:P24i_changed_ownership_through <http://americanartcollaborative.org/npg/object/13/acquisition> ;
+    crm:P2_has_type <http://americanartcollaborative.org/npg/thesauri/classification/Photograph> ;
+    crm:P43_has_dimension <http://americanartcollaborative.org/npg/object/13/dimensions> ;
+    crm:P52_has_current_owner <http://www.npg.si.edu/> .
+
+<http://americanartcollaborative.org/npg/object/17> a crm:E22_Man-Made_Object ;
+    crm:P108i_was_produced_by <http://americanartcollaborative.org/npg/object/17/production> ;
+    crm:P24i_changed_ownership_through <http://americanartcollaborative.org/npg/object/17/acquisition> ;
+    crm:P2_has_type <http://americanartcollaborative.org/npg/thesauri/classification/Drawing> ;
+    crm:P43_has_dimension <http://americanartcollaborative.org/npg/object/17/dimensions> ;
+    crm:P52_has_current_owner <http://www.npg.si.edu/> .
+
+<http://americanartcollaborative.org/npg/object/18> a crm:E22_Man-Made_Object ;
+    crm:P108i_was_produced_by <http://americanartcollaborative.org/npg/object/18/production> ;
+    crm:P24i_changed_ownership_through <http://americanartcollaborative.org/npg/object/18/acquisition> ;
+    crm:P2_has_type <http://americanartcollaborative.org/npg/thesauri/classification/Drawing> ;
+    crm:P43_has_dimension <http://americanartcollaborative.org/npg/object/18/dimensions> ;
+    crm:P52_has_current_owner <http://www.npg.si.edu/> .
+
+<http://americanartcollaborative.org/npg/object/4> a crm:E22_Man-Made_Object ;
+    crm:P108i_was_produced_by <http://americanartcollaborative.org/npg/object/4/production> ;
+    crm:P24i_changed_ownership_through <http://americanartcollaborative.org/npg/object/4/acquisition> ;
+    crm:P2_has_type <http://americanartcollaborative.org/npg/thesauri/classification/Drawing> ;
+    crm:P43_has_dimension <http://americanartcollaborative.org/npg/object/4/dimensions> ;
+    crm:P52_has_current_owner <http://www.npg.si.edu/> .
+
+<http://americanartcollaborative.org/npg/object/13/acquisition> a crm:E8_Acquisition ;
+    crm:P22_transferred_title_to <http://www.npg.si.edu/> ;
+    crm:P3_has_note " gift of George R. Rinhart" .
+
+<http://americanartcollaborative.org/npg/object/13/design> a crm:E29_Design_or_Procedure ;
+    crm:P3_has_note "Gelatin silver print" .
+
+<http://americanartcollaborative.org/npg/object/13/dimensions> a crm:E54_Dimension ;
+    crm:P3_has_note "33.8cm x 27.2cm (13 5/16\" x 10 11/16\"), Image" .
+
+<http://americanartcollaborative.org/npg/object/13/production> a crm:E12_Production ;
+    crm:P33_used_specific_technique <http://americanartcollaborative.org/npg/object/13/design> ;
+    crm:P4_has_time-span <http://americanartcollaborative.org/npg/object/13/production/date> .
+
+<http://americanartcollaborative.org/npg/object/13/production/date> a crm:E52_Time-Span ;
+    rdfs:label "1950" ;
+    crm:P82a_begin_of_the_begin "1950" ;
+    crm:P82b_end_of_the_end "1950" .
+
+<http://americanartcollaborative.org/npg/object/17/acquisition> a crm:E8_Acquisition ;
+    crm:P22_transferred_title_to <http://www.npg.si.edu/> ;
+    crm:P3_has_note " gift of Phyllis B. Cox" .
+
+<http://americanartcollaborative.org/npg/object/17/design> a crm:E29_Design_or_Procedure ;
+    crm:P3_has_note "Pencil on paper" .
+
+<http://americanartcollaborative.org/npg/object/17/dimensions> a crm:E54_Dimension ;
+    crm:P3_has_note "Sheet: 34.4 x 27.8 cm (13 9/16 x 10 15/16\")" .
+
+<http://americanartcollaborative.org/npg/object/17/production> a crm:E12_Production ;
+    crm:P33_used_specific_technique <http://americanartcollaborative.org/npg/object/17/design> ;
+    crm:P4_has_time-span <http://americanartcollaborative.org/npg/object/17/production/date> .
+
+<http://americanartcollaborative.org/npg/object/17/production/date> a crm:E52_Time-Span ;
+    rdfs:label "1969" ;
+    crm:P82a_begin_of_the_begin "1969" ;
+    crm:P82b_end_of_the_end "1969" .
+
+<http://americanartcollaborative.org/npg/object/18/acquisition> a crm:E8_Acquisition ;
+    crm:P22_transferred_title_to <http://www.npg.si.edu/> ;
+    crm:P3_has_note " gift of Phyllis B. Cox" .
+
+<http://americanartcollaborative.org/npg/object/18/design> a crm:E29_Design_or_Procedure ;
+    crm:P3_has_note "Pencil on paper" .
+
+<http://americanartcollaborative.org/npg/object/18/dimensions> a crm:E54_Dimension ;
+    crm:P3_has_note "Sheet: 35.4 x 27.8 cm (13 15/16 x 10 15/16\")" .
+
+<http://americanartcollaborative.org/npg/object/18/production> a crm:E12_Production ;
+    crm:P33_used_specific_technique <http://americanartcollaborative.org/npg/object/18/design> ;
+    crm:P4_has_time-span <http://americanartcollaborative.org/npg/object/18/production/date> .
+
+<http://americanartcollaborative.org/npg/object/18/production/date> a crm:E52_Time-Span ;
+    rdfs:label "1969" ;
+    crm:P82a_begin_of_the_begin "1969" ;
+    crm:P82b_end_of_the_end "1969" .
+
+<http://americanartcollaborative.org/npg/object/4/acquisition> a crm:E8_Acquisition ;
+    crm:P22_transferred_title_to <http://www.npg.si.edu/> ;
+    crm:P3_has_note " gift of the artist's daughters, Muriel Woolf Hobson and Dorothy Woolf Ahern" .
+
+<http://americanartcollaborative.org/npg/object/4/design> a crm:E29_Design_or_Procedure ;
+    crm:P3_has_note "Charcoal and chalk on paper" .
+
+<http://americanartcollaborative.org/npg/object/4/dimensions> a crm:E54_Dimension ;
+    crm:P3_has_note "60.1cm x 48.2cm (23 11/16\" x 19\"), Image" .
+
+<http://americanartcollaborative.org/npg/object/4/production> a crm:E12_Production ;
+    crm:P33_used_specific_technique <http://americanartcollaborative.org/npg/object/4/design> ;
+    crm:P4_has_time-span <http://americanartcollaborative.org/npg/object/4/production/date> .
+
+<http://americanartcollaborative.org/npg/object/4/production/date> a crm:E52_Time-Span ;
+    rdfs:label "1929" ;
+    crm:P82a_begin_of_the_begin "1929" ;
+    crm:P82b_end_of_the_end "1929" .
+
+<http://americanartcollaborative.org/npg/thesauri/classification/Photograph> a crm:E55_Type ;
+    rdfs:label "Photograph" .
+
+<http://americanartcollaborative.org/npg/thesauri/classification/Drawing> a crm:E55_Type ;
+    rdfs:label "Drawing" .
+
+<http://www.npg.si.edu/> a crm:E40_Legal_Body .
+
