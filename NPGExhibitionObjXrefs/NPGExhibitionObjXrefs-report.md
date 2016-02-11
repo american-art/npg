@@ -1,7 +1,3 @@
-### Model ScreenShot
-
-[Click here to view the model screenshot](https://github.com/american-art/npg/blob/master/model_graphviz_pdf/NPGExhibitionObjXrefs_Sheet1.model.pdf)
-
 
 ### Python Transformations
 #### ObjectURI:
