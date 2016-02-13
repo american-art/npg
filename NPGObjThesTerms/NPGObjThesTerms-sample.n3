@@ -1,0 +1,82 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://americanartcollaborative.org/npg/object/13> a crm:E22_Man-Made_Object ;
+    crm:P62_depicts <http://americanartcollaborative.org/npg/object/13/Portrait-Objects/Hat>,
+        <http://americanartcollaborative.org/npg/object/13/Portrait-Objects/Necktie>,
+        <http://americanartcollaborative.org/npg/object/13/Portrait-Setting/Interior> .
+
+<http://americanartcollaborative.org/npg/object/17> a crm:E22_Man-Made_Object ;
+    crm:P62_depicts <http://americanartcollaborative.org/npg/object/17/Sitter-Type/Individual> .
+
+<http://americanartcollaborative.org/npg/object/18> a crm:E22_Man-Made_Object ;
+    crm:P62_depicts <http://americanartcollaborative.org/npg/object/18/Sitter-Type/Individual> .
+
+<http://americanartcollaborative.org/npg/object/19> a crm:E22_Man-Made_Object ;
+    crm:P62_depicts <http://americanartcollaborative.org/npg/object/19/Sitter-Type/Individual> .
+
+<http://americanartcollaborative.org/npg/object/4> a crm:E22_Man-Made_Object ;
+    crm:P62_depicts <http://americanartcollaborative.org/npg/object/4/Portrait-Objects/Mustache>,
+        <http://americanartcollaborative.org/npg/object/4/Portrait-Objects/Necktie>,
+        <http://americanartcollaborative.org/npg/object/4/Sitter-Type/Individual> .
+
+<http://americanartcollaborative.org/npg/NPG-Local-Authorities/Attributes/Objects/Portrait-Objects/Clothing-&-Apparel/Dress-Accessory/Headgear/Hat> a crm:E55_Type ;
+    rdfs:label "Hat" ;
+    crm:P127_has_broader_term <http://americanartcollaborative.org/npg/NPGLocalAuthorities/Attributes/Objects/PortraitObjects/Clothing&Apparel/DressAccessory/Headgear/> .
+
+<http://americanartcollaborative.org/npg/NPG-Local-Authorities/Attributes/Objects/Portrait-Objects/Personal-Attribute/Facial-Hair/Mustache> a crm:E55_Type ;
+    rdfs:label "Mustache" ;
+    crm:P127_has_broader_term <http://americanartcollaborative.org/npg/NPGLocalAuthorities/Attributes/Objects/PortraitObjects/PersonalAttribute/FacialHair/> .
+
+<http://americanartcollaborative.org/npg/NPG-Local-Authorities/Attributes/Objects/Portrait-Setting/Interior> a crm:E55_Type ;
+    rdfs:label "Interior" ;
+    crm:P127_has_broader_term <http://americanartcollaborative.org/npg/NPGLocalAuthorities/Attributes/Objects/PortraitSetting/> .
+
+<http://americanartcollaborative.org/npg/NPGLocalAuthorities/Attributes/Objects/PortraitObjects/Clothing&Apparel/DressAccessory/Headgear/> a crm:E55_Type .
+
+<http://americanartcollaborative.org/npg/NPGLocalAuthorities/Attributes/Objects/PortraitObjects/Clothing&Apparel/DressAccessory/Tie/> a crm:E55_Type .
+
+<http://americanartcollaborative.org/npg/NPGLocalAuthorities/Attributes/Objects/PortraitObjects/PersonalAttribute/FacialHair/> a crm:E55_Type .
+
+<http://americanartcollaborative.org/npg/NPGLocalAuthorities/Attributes/Objects/PortraitSetting/> a crm:E55_Type .
+
+<http://americanartcollaborative.org/npg/NPGLocalAuthorities/Attributes/Objects/SitterType/> a crm:E55_Type .
+
+<http://americanartcollaborative.org/npg/object/13/Portrait-Objects/Hat> a crm:E19_Physical_Object ;
+    crm:P2_has_type <http://americanartcollaborative.org/npg/NPG-Local-Authorities/Attributes/Objects/Portrait-Objects/Clothing-&-Apparel/Dress-Accessory/Headgear/Hat> .
+
+<http://americanartcollaborative.org/npg/object/13/Portrait-Objects/Necktie> a crm:E19_Physical_Object ;
+    crm:P2_has_type <http://americanartcollaborative.org/npg/NPG-Local-Authorities/Attributes/Objects/Portrait-Objects/Clothing-&-Apparel/Dress-Accessory/Tie/Necktie> .
+
+<http://americanartcollaborative.org/npg/object/13/Portrait-Setting/Interior> a crm:E19_Physical_Object ;
+    crm:P2_has_type <http://americanartcollaborative.org/npg/NPG-Local-Authorities/Attributes/Objects/Portrait-Setting/Interior> .
+
+<http://americanartcollaborative.org/npg/object/17/Sitter-Type/Individual> a crm:E19_Physical_Object ;
+    crm:P2_has_type <http://americanartcollaborative.org/npg/NPG-Local-Authorities/Attributes/Objects/Sitter-Type/Individual> .
+
+<http://americanartcollaborative.org/npg/object/18/Sitter-Type/Individual> a crm:E19_Physical_Object ;
+    crm:P2_has_type <http://americanartcollaborative.org/npg/NPG-Local-Authorities/Attributes/Objects/Sitter-Type/Individual> .
+
+<http://americanartcollaborative.org/npg/object/19/Sitter-Type/Individual> a crm:E19_Physical_Object ;
+    crm:P2_has_type <http://americanartcollaborative.org/npg/NPG-Local-Authorities/Attributes/Objects/Sitter-Type/Individual> .
+
+<http://americanartcollaborative.org/npg/object/4/Portrait-Objects/Mustache> a crm:E19_Physical_Object ;
+    crm:P2_has_type <http://americanartcollaborative.org/npg/NPG-Local-Authorities/Attributes/Objects/Portrait-Objects/Personal-Attribute/Facial-Hair/Mustache> .
+
+<http://americanartcollaborative.org/npg/object/4/Portrait-Objects/Necktie> a crm:E19_Physical_Object ;
+    crm:P2_has_type <http://americanartcollaborative.org/npg/NPG-Local-Authorities/Attributes/Objects/Portrait-Objects/Clothing-&-Apparel/Dress-Accessory/Tie/Necktie> .
+
+<http://americanartcollaborative.org/npg/object/4/Sitter-Type/Individual> a crm:E19_Physical_Object ;
+    crm:P2_has_type <http://americanartcollaborative.org/npg/NPG-Local-Authorities/Attributes/Objects/Sitter-Type/Individual> .
+
+<http://americanartcollaborative.org/npg/NPG-Local-Authorities/Attributes/Objects/Portrait-Objects/Clothing-&-Apparel/Dress-Accessory/Tie/Necktie> a crm:E55_Type ;
+    rdfs:label "Necktie" ;
+    crm:P127_has_broader_term <http://americanartcollaborative.org/npg/NPGLocalAuthorities/Attributes/Objects/PortraitObjects/Clothing&Apparel/DressAccessory/Tie/> .
+
+<http://americanartcollaborative.org/npg/NPG-Local-Authorities/Attributes/Objects/Sitter-Type/Individual> a crm:E55_Type ;
+    rdfs:label "Individual" ;
+    crm:P127_has_broader_term <http://americanartcollaborative.org/npg/NPGLocalAuthorities/Attributes/Objects/SitterType/> .
+
