@@ -1,7 +1,6 @@
 ## NPGObjects_Sheet1
 
 ### PyTransforms
-
 #### _ObjectURI_
 From column: _ObjectID_
 >``` python
@@ -37,6 +36,27 @@ return getValue("ObjectURI")+"/production/date"
 
 ```
 
+#### _MuseumURI_
+From column: _CreditLine_
+>``` python
+return "http://www.npg.si.edu/"
+```
+
+#### _Acquisition_
+From column: _MuseumURI_
+>``` python
+if getValue("CreditLine"):
+    return getValue("CreditLine").split(";")[1]
+else:
+    return ""
+```
+
+#### _AcquisitionURI_
+From column: _Acquisition_
+>``` python
+return getValue("ObjectURI")+"/acquisition"
+```
+
 #### _DateBeginValid_
 From column: _DateBegin_
 >``` python
@@ -62,6 +82,7 @@ if getValue("Medium"):
     return getValue("ObjectURI")+"/medium"
 ```
 
+
 ### Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
@@ -86,4 +107,4 @@ if getValue("Medium"):
 | `E22_Man-Made_Object1` | `http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by` | `E12_Production1`|
 | `E22_Man-Made_Object1` | `http://www.cidoc-crm.org/cidoc-crm/P2_has_type` | `E55_Type1`|
 | `E22_Man-Made_Object1` | `http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension` | `E54_Dimension1`|
-| `E22_Man-Made_Object1` | `http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of` | `E57_Material1`|
+| `E22_Man-Made_Object1` | `http://www.cidoc-crm.org/cidoc-crm/P45_consists_of` | `E57_Material1`|
