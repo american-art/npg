@@ -146,8 +146,10 @@ return getValue("ReferenceURI") + "/production"
 | _Dated_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _DeathDateURI_ | `uri` | `crm:E52_Time-Span2`|
 | _DeathURI_ | `uri` | `crm:E69_Death1`|
+| _Dimension_ | `rdfs:label` | `crm:E16_Measurement1`|
 | _DimensionStringType_ | `rdfs:label` | `crm:E55_Type4`|
 | _DimensionStringTypeURI_ | `uri` | `crm:E55_Type4`|
+| _DimensionURI_ | `uri` | `crm:E16_Measurement1`|
 | _DimensionURI_ | `uri` | `crm:E54_Dimension1`|
 | _Dimensions_ | `crm:P3_has_note` | `crm:E54_Dimension1`|
 | _DisplayName_ | `rdfs:label` | `crm:E41_Appellation5`|
@@ -180,6 +182,8 @@ return getValue("ReferenceURI") + "/production"
 | _PageNumberURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _PageNumberValid_ | `rdfs:label` | `crm:E33_Linguistic_Object1`|
 | _PlacePublished_ | `rdfs:label` | `crm:E44_Place_Appellation1`|
+| _PlacePublished_ | `rdfs:label` | `crm:E44_Place_Appellation1`|
+| _PlacePublishedURI_ | `uri` | `crm:E44_Place_Appellation1`|
 | _PlacePublishedURI_ | `uri` | `crm:E44_Place_Appellation1`|
 | _PreferredLabel_ | `rdfs:label` | `crm:E35_Title1`|
 | _PrimaryTitleType_ | `rdfs:label` | `crm:E55_Type3`|
@@ -188,6 +192,8 @@ return getValue("ReferenceURI") + "/production"
 | _ProductionDateURI_ | `uri` | `crm:E52_Time-Span1`|
 | _ProductionURI_ | `uri` | `crm:E12_Production1`|
 | _ProductionURI_ | `uri` | `crm:E12_Production1`|
+| _Provenance_ | `crm:P3_has_note` | `crm:E10_Transfer_of_Custody1`|
+| _ProvenanceURI_ | `uri` | `crm:E10_Transfer_of_Custody1`|
 | _ReferenceTypeURI_ | `uri` | `crm:E55_Type1`|
 | _ReferenceURI_ | `uri` | `crm:E31_Document1`|
 | _ReferenceURI_ | `uri` | `crm:E31_Document1`|
@@ -197,6 +203,8 @@ return getValue("ReferenceURI") + "/production"
 | _SitterURI_ | `uri` | `crm:E21_Person1`|
 | _SubTitle_ | `rdfs:label` | `crm:E35_Title2`|
 | _SubTitleTranslateType_ | `rdfs:label` | `crm:E55_Type5`|
+| _SubTitleTranslateType_ | `rdfs:label` | `crm:E55_Type5`|
+| _SubTitleTranslateTypeURI_ | `uri` | `crm:E55_Type5`|
 | _SubTitleTranslateTypeURI_ | `uri` | `crm:E55_Type5`|
 | _SubTitleURI_ | `uri` | `crm:E35_Title2`|
 | _Suffix_ | `rdfs:label` | `crm:E41_Appellation4`|
@@ -209,6 +217,7 @@ return getValue("ReferenceURI") + "/production"
 | _TitleURI_ | `uri` | `crm:E35_Title2`|
 | _TitleURI_ | `uri` | `crm:E35_Title1`|
 | _URL_ | `rdfs:label` | `crm:E51_Contact_Point1`|
+| _WebImageURI_ | `uri` | `crm:E38_Image1`|
 | _YearPublishedURI_ | `uri` | `crm:E52_Time-Span1`|
 | _urlURI_ | `uri` | `crm:E51_Contact_Point1`|
 
@@ -219,10 +228,11 @@ return getValue("ReferenceURI") + "/production"
 | `crm:E12_Production1` | `crm:P7_took_place_at` | `crm:E44_Place_Appellation1`|
 | `crm:E12_Production1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E31_Document1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
-| `crm:E31_Document1` | `crm:P102_has_title` | `crm:E35_Title1`|
-| `crm:E31_Document1` | `crm:P102_has_title` | `crm:E35_Title2`|
+| `crm:E31_Document1` | `crm:P1_is_identified_by` | `crm:E41_Appellation1`|
 | `crm:E31_Document1` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E35_Title1` | `crm:P2_has_type` | `crm:E55_Type2`|
 | `crm:E35_Title1` | `crm:P2_has_type` | `crm:E55_Type3`|
 | `crm:E35_Title2` | `crm:P2_has_type` | `crm:E55_Type4`|
 | `crm:E35_Title2` | `crm:P2_has_type` | `crm:E55_Type5`|
+| `crm:E41_Appellation1` | `crm:P106_is_composed_of` | `crm:E35_Title1`|
+| `crm:E41_Appellation1` | `crm:P106_is_composed_of` | `crm:E35_Title2`|
