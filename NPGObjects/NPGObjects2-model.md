@@ -214,4 +214,3 @@ else:
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `crm:E55_Type7`|
 | `crm:E42_Identifier1` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E42_Identifier2` | `crm:P2_has_type` | `crm:E55_Type2`|
-| `crm:E42_Identifier2` | `crm:P2_has_type` | `crm:E55_Type6`|
