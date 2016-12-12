@@ -1,197 +1,217 @@
-## NPGObjects2_Sheet1
+# NPGObjects2_Sheet1
 
-### PyTransforms
+## Add Column
+
+## Add Node/Literal
+
+## PyTransforms
 #### _ObjectURI_
 From column: _ObjectID_
->``` python
-return "object/"+getValue("ObjectID")
+``` python
+return UM.uri_from_fields("object/", getValue("ObjectID"))
 ```
 
-#### _ClassificationURI_
-From column: _Classification_
->``` python
-if getValue("Classification"):
-    return "thesauri/classification/"+getValue("Classification").lower().replace(' ', '_')
-else:
-    return ""
+#### _RepositoryTermsURI_
+From column: _ObjectID_
+``` python
+return "aat:300404621"
 ```
 
-#### _ProductionURI_
-From column: _ClassificationURI_
->``` python
-return getValue("ObjectURI") + "/production"
-
+#### _ObjectIDURI_
+From column: _ObjectID_
+``` python
+return UM.uri_from_fields("object/id/", getValue("ObjectID"))
 ```
 
-#### _DimensionURI_
-From column: _Dimensions_
->``` python
-return getValue("ObjectURI")+"/dimensions"
+#### _ObjectIDCopy_
+From column: _ObjectID_
+``` python
+return getValue("ObjectID")
 ```
 
-#### _ProductionDateURI_
-From column: _DateEnd_
->``` python
-return getValue("ObjectURI")+"/production/date"
-
-```
-
-#### _CreditLineURI_
-From column: _CreditLine_
->``` python
-if getValue("CreditLine"):
-    return getValue("ObjectURI") + "/credit_line"
+#### _PreferredTermsURI_
+From column: _ObjectNumber_
+``` python
+if getValue("ObjectNumber"):
+    return "aat:300404670"
 else:
     return ''
 ```
 
-#### _CreditLineStringType_
-From column: _CreditLineURI_
->``` python
-if getValue("CreditLine"):
-    return "Credit Line Statement"
-else:
-    return ""
+#### _PreferredIDURI_
+From column: _ObjectNumber_
+``` python
+return UM.uri_from_fields("object/preferred_id/", getValue("ObjectNumber"))
 ```
 
-#### _CreditLineStringTypeURI_
-From column: _CreditLineStringType_
->``` python
-if getValue("CreditLineStringType"):
-    return "thesauri/credit_line_string_type/credit_line_statement"
+#### _ObjectNumberCopy_
+From column: _ObjectNumber_
+``` python
+return getValue("ObjectNumber")
+```
+
+#### _ClassificationURI_
+From column: _Classification_
+``` python
+if getValue("Classification"):
+    return UM.uri_from_fields("thesauri/classification/", getValue("Classification"))
+else:
+    return ''
+```
+
+#### _ClassificationEventURI_
+From column: _Classification_
+``` python
+if getValue("Classification"):
+    prefix = getValue("ObjectURI") + "/classification_event/"
+    return UM.uri_from_fields(prefix, getValue("Classification"))
+else:
+    return ''
+```
+
+#### _VisualWorksURI_
+From column: _Classification_
+``` python
+if getValue("Classification"):
+    return "http://vocab.getty.edu/aat/300179869"
+else:
+    return ''
+```
+
+#### _MaterialComponentsURI_
+From column: _Medium_
+``` python
+if getValue("Medium") != 'NULL':
+    return "http://vocab.getty.edu/aat/300264237"
+else:
+    return ''
+```
+
+#### _MediumURI_
+From column: _Medium_
+``` python
+if getValue("Medium"):
+    return getValue("ObjectURI") + "/medium_text"
 else:
     return ''
 ```
 
 #### _DateBeginValid_
 From column: _DateBegin_
->``` python
-if getValue("DateBegin") == '0':
-    return ""
-else:
-    return getValue("DateBegin")
+``` python
+if getValue("DateBegin") == 0:
+    return ''
+return "01-01-" + getValue("DateBegin")
 ```
 
 #### _DateEndValid_
 From column: _DateEnd_
->``` python
-if getValue("DateEnd") == '0':
-    return ""
-else:
-    return getValue("DateEnd")
+``` python
+if getValue("DateEnd") == 0:
+    return ''
+return "12-31-" + getValue("DateEnd")
 ```
 
-#### _MediumURI_
-From column: _Medium_
->``` python
-if getValue("Medium"):
-    return getValue("ObjectURI")+"/medium"
+#### _ProductionURI_
+From column: _ObjectURI_
+``` python
+return getValue("ObjectURI") + "/production"
 ```
 
-#### _ObjectNumberURI_
-From column: _ObjectNumber_
->``` python
-return getValue("ObjectURI") + "/object_number"
+#### _ProductionTimeSpanURI_
+From column: _Dated_
+``` python
+return getValue("ProductionURI") + "/timespan"
 ```
 
-#### _DimensionStringType_
+#### _DimensionsAAT_
 From column: _Dimensions_
->``` python
+``` python
 if getValue("Dimensions"):
-    return "Dimension Statement"
+    return "http://vocab.getty.edu/aat/300266036"
 else:
     return ''
 ```
 
-#### _DimensionStringTypeURI_
-From column: _DimensionStringType_
->``` python
-if getValue("DimensionStringType"):
-    return "thesauri/dimension_string_type/dimension_statement"
+#### _DimensionsTextURI_
+From column: _Dimensions_
+``` python
+if getValue("Dimensions"):
+    return getValue("ObjectURI") + "/dimensions_text"
+else:
+    return ''
+```
+
+#### _AcknowledgementsURI_
+From column: _CreditLine_
+``` python
+if getValue("CreditLine"):
+    return "http://vocab.getty.edu/aat/300026687"
+else:
+    return ''
+```
+
+#### _CreditLineURI_
+From column: _CreditLine_
+``` python
+if getValue("CreditLine"):
+    return getValue("ObjectURI") + "/credit_line"
 else:
     return ''
 ```
 
 
-### Semantic Types
+## Selections
+
+## Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
-| _AutryMakerURL_ | `crm:P3_has_note` | `crm:E39_Actor1`|
-| _BeginDate_ | `crm:P82_at_some_time_within` | `crm:E52_Time-Span2`|
-| _BeginXSDDate_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
-| _BirthDateURI_ | `uri` | `crm:E52_Time-Span2`|
-| _BirthURI_ | `uri` | `crm:E67_Birth1`|
-| _Classification_ | `rdfs:label` | `crm:E55_Type1`|
-| _ClassificationURI_ | `uri` | `crm:E55_Type1`|
-| _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
-| _CreditLine_ | `rdfs:label` | `crm:E39_Actor1`|
-| _CreditLineStringType_ | `rdfs:label` | `crm:E55_Type3`|
-| _CreditLineStringTypeURI_ | `uri` | `crm:E55_Type3`|
-| _CreditLineURI_ | `uri` | `crm:E39_Actor1`|
-| _Culture_ | `rdfs:label` | `crm:E74_Group1`|
-| _CultureURI_ | `uri` | `crm:E74_Group1`|
+| _AcknowledgementsURI_ | `uri` | `crm:E55_Type7`|
+| _Classification_ | `rdfs:label` | `crm:E55_Type3`|
+| _ClassificationEventURI_ | `uri` | `crm:E17_Type_Assignment1`|
+| _ClassificationURI_ | `uri` | `crm:E55_Type3`|
+| _CreditLine_ | `rdf:value` | `crm:E33_Linguistic_Object3`|
+| _CreditLineURI_ | `uri` | `crm:E33_Linguistic_Object3`|
 | _DateBeginValid_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _DateEndValid_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | _Dated_ | `rdfs:label` | `crm:E52_Time-Span1`|
-| _Dated_ | `crm:P3_has_note` | `crm:E52_Time-Span2`|
-| _DeathDateURI_ | `uri` | `crm:E52_Time-Span1`|
-| _DeathURI_ | `uri` | `crm:E69_Death1`|
-| _DimensionStringType_ | `rdfs:label` | `crm:E55_Type2`|
-| _DimensionStringTypeURI_ | `uri` | `crm:E55_Type2`|
-| _DimensionURI_ | `uri` | `crm:E54_Dimension1`|
-| _Dimensions_ | `rdfs:label` | `crm:E54_Dimension1`|
-| _DisplayName_ | `rdfs:label` | `crm:E41_Appellation5`|
-| _DisplayNameURI_ | `uri` | `crm:E41_Appellation5`|
-| _DisplayNameURI_ | `uri` | `crm:E41_Appellation4`|
-| _DisplayPersonInstitutionName_ | `rdfs:label` | `crm:E41_Appellation4`|
-| _EndDate_ | `crm:P82_at_some_time_within` | `crm:E52_Time-Span1`|
-| _EndXSDDate_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span2`|
-| _FirstName_ | `rdfs:label` | `crm:E41_Appellation3`|
-| _FirstNameAppellationURI_ | `uri` | `crm:E41_Appellation3`|
-| _FirstNameURI_ | `uri` | `crm:E55_Type3`|
-| _LastName_ | `rdfs:label` | `crm:E41_Appellation1`|
-| _LastNameAppellationURI_ | `uri` | `crm:E41_Appellation1`|
-| _LastNameURI_ | `uri` | `crm:E55_Type1`|
-| _Medium_ | `crm:P3_has_note` | `crm:E55_Type4`|
-| _MediumURI_ | `uri` | `crm:E55_Type4`|
-| _MiddleName_ | `rdfs:label` | `crm:E41_Appellation2`|
-| _MiddleNameAppellationURI_ | `uri` | `crm:E41_Appellation2`|
-| _MiddleNameURI_ | `uri` | `crm:E55_Type2`|
-| _NameType_ | `rdfs:label` | `crm:E55_Type3`|
-| _ObjectNumber_ | `rdfs:label` | `crm:E42_Identifier1`|
-| _ObjectNumberURI_ | `uri` | `crm:E42_Identifier1`|
+| _Dimensions_ | `rdf:value` | `crm:E33_Linguistic_Object2`|
+| _DimensionsAAT_ | `uri` | `crm:E55_Type6`|
+| _DimensionsTextURI_ | `uri` | `crm:E33_Linguistic_Object2`|
+| _MaterialComponentsURI_ | `uri` | `crm:E55_Type5`|
+| _Medium_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
+| _MediumURI_ | `uri` | `crm:E33_Linguistic_Object1`|
+| _ObjectID_ | `rdfs:label` | `crm:E42_Identifier1`|
+| _ObjectIDCopy_ | `rdf:value` | `crm:E42_Identifier1`|
+| _ObjectIDURI_ | `uri` | `crm:E42_Identifier1`|
+| _ObjectNumber_ | `rdfs:label` | `crm:E42_Identifier2`|
+| _ObjectNumberCopy_ | `rdf:value` | `crm:E42_Identifier2`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
-| _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
-| _PlacePublished_ | `rdfs:label` | `crm:E44_Place_Appellation1`|
-| _PlacePublishedURI_ | `uri` | `crm:E44_Place_Appellation1`|
-| _PrimaryTitle_ | `rdfs:label` | `crm:E35_Title2`|
-| _PrimaryTitleTranslationType_ | `rdfs:label` | `crm:E55_Type2`|
-| _PrimaryTitleURI_ | `uri` | `crm:E35_Title2`|
-| _ProductionDateURI_ | `uri` | `crm:E52_Time-Span1`|
+| _PreferredIDURI_ | `uri` | `crm:E42_Identifier2`|
+| _PreferredTermsURI_ | `uri` | `crm:E55_Type2`|
+| _ProductionTimeSpanURI_ | `uri` | `crm:E52_Time-Span1`|
 | _ProductionURI_ | `uri` | `crm:E12_Production1`|
-| _ProductionURI_ | `uri` | `crm:E12_Production1`|
-| _PublicDescription_ | `crm:P3_has_note` | `crm:E22_Man-Made_Object1`|
-| _ReferenceURI_ | `uri` | `crm:E31_Document1`|
-| _SecondaryTitle_ | `rdfs:label` | `crm:E35_Title1`|
-| _SecondaryTitleTranslateType_ | `rdfs:label` | `crm:E55_Type4`|
-| _SecondaryTitleTranslateTypeURI_ | `uri` | `crm:E55_Type4`|
-| _SecondaryTitleType_ | `rdfs:label` | `crm:E55_Type1`|
-| _SecondaryTitleURI_ | `uri` | `crm:E35_Title1`|
-| _SubTitleTranslateType_ | `rdfs:label` | `crm:E55_Type5`|
-| _SubTitleTranslateTypeURI_ | `uri` | `crm:E55_Type5`|
-| _ULAN_ID_ | `rdfs:label` | `crm:E42_Identifier1`|
-| _ULAN_ID_Type_ | `uri` | `crm:E42_Identifier1`|
+| _RepositoryTermsURI_ | `uri` | `crm:E55_Type1`|
+| _VisualWorksURI_ | `uri` | `crm:E55_Type4`|
 
 
-### Links
+## Links
 | From | Property | To |
 |  --- | -------- | ---|
 | `crm:E12_Production1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
+| `crm:E17_Type_Assignment1` | `crm:P42_assigned` | `crm:E55_Type3`|
+| `crm:E17_Type_Assignment1` | `crm:P21_had_general_purpose` | `crm:E55_Type4`|
 | `crm:E22_Man-Made_Object1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
-| `crm:E22_Man-Made_Object1` | `crm:P51_has_former_or_current_owner` | `crm:E39_Actor1`|
-| `crm:E22_Man-Made_Object1` | `crm:P48_has_preferred_identifier` | `crm:E42_Identifier1`|
-| `crm:E22_Man-Made_Object1` | `crm:P43_has_dimension` | `crm:E54_Dimension1`|
-| `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type1`|
-| `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type4`|
-| `crm:E39_Actor1` | `crm:P2_has_type` | `crm:E55_Type3`|
-| `crm:E54_Dimension1` | `crm:P2_has_type` | `crm:E55_Type2`|
+| `crm:E22_Man-Made_Object1` | `crm:P41i_was_classified_by` | `crm:E17_Type_Assignment1`|
+| `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object1`|
+| `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object2`|
+| `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object3`|
+| `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
+| `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier2`|
+| `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type3`|
+| `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `crm:E55_Type5`|
+| `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `crm:E55_Type6`|
+| `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `crm:E55_Type7`|
+| `crm:E42_Identifier1` | `crm:P2_has_type` | `crm:E55_Type1`|
+| `crm:E42_Identifier2` | `crm:P2_has_type` | `crm:E55_Type2`|
+| `crm:E42_Identifier2` | `crm:P2_has_type` | `crm:E55_Type6`|
