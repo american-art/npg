@@ -13,6 +13,16 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `http://vocab.getty.edu/aat/300404845`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
+#### Literal Node: `http://vocab.getty.edu/aat/300404651`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ValidBirthYear_
@@ -138,6 +148,60 @@ From column: _AlphaSort_
 return getValue("ConstituentURI") + "/sort_name"
 ```
 
+#### _NamePrefixTypeClassURI_
+From column: _NameTitle_
+``` python
+if getValue("NameTitle") != 'NULL':
+    return getValue("ConstituentURI") + "/name_prefix_type_class"
+else:
+    return ''
+```
+
+#### _NamePrefixClassURI_
+From column: _NameTitle_
+``` python
+if getValue("NameTitle") != 'NULL':
+    return getValue("ConstituentURI") + "/name_prefix_class"
+else:
+    return ''
+```
+
+#### _NamePrefixValid_
+From column: _NameTitle_
+``` python
+if getValue("NameTitle") != 'NULL':
+    return getValue("NameTitle")
+else:
+    return ''
+```
+
+#### _GivenNameTypeClass_
+From column: _FirstName_
+``` python
+if getValue("FirstName") != 'NULL':
+    return getValue("ConstituentURI") + "/given_name_type_class"
+else:
+    return ''
+```
+
+#### _GivenNameClassURI_
+From column: _FirstName_
+``` python
+if getValue("FirstName") != 'NULL':
+    return getValue("ConstituentURI") + "/given_name_class"
+else:
+    return ''
+```
+
+#### _FirstNameValid_
+From column: _FirstName_
+``` python
+if getValue("FirstName") != 'NULL':
+    return getValue("FirstName")
+else:
+    return ''
+```
+
 
 ## Selections
 
@@ -155,8 +219,14 @@ return getValue("ConstituentURI") + "/sort_name"
 | _DisplayNameCopy_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
 | _EarliestBirthdate_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _EarliestDeathdate_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
+| _FirstNameValid_ | `rdf:value` | `crm:E82_Actor_Appellation4`|
+| _GivenNameClassURI_ | `uri` | `crm:E82_Actor_Appellation4`|
+| _GivenNameTypeClass_ | `uri` | `crm:E55_Type2`|
 | _LatestBirthdate_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | _LatestDeathdate_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span2`|
+| _NamePrefixClassURI_ | `uri` | `crm:E82_Actor_Appellation3`|
+| _NamePrefixTypeClassURI_ | `uri` | `crm:E55_Type1`|
+| _NamePrefixValid_ | `rdf:value` | `crm:E82_Actor_Appellation3`|
 | _SortNameURI_ | `uri` | `crm:E82_Actor_Appellation2`|
 | _ValidBirthYear_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _ValidDeathYear_ | `rdfs:label` | `crm:E52_Time-Span2`|
@@ -169,7 +239,13 @@ return getValue("ConstituentURI") + "/sort_name"
 | `crm:E39_Actor1` | `crm:P93i_was_taken_out_of_existence_by` | `crm:E64_End_of_Existence1`|
 | `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation1`|
 | `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation2`|
+| `crm:E55_Type1` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404845`|
+| `crm:E55_Type2` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404651`|
 | `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E64_End_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
+| `crm:E82_Actor_Appellation1` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation3`|
+| `crm:E82_Actor_Appellation1` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation4`|
 | `crm:E82_Actor_Appellation1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
 | `crm:E82_Actor_Appellation2` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404672`|
+| `crm:E82_Actor_Appellation3` | `crm:P2_has_type` | `crm:E55_Type1`|
+| `crm:E82_Actor_Appellation4` | `crm:P2_has_type` | `crm:E55_Type2`|
