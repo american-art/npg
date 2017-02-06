@@ -1,4 +1,4 @@
-# NPGObjects2_Sheet1
+# NPGObjects2.csv
 
 ## Add Column
 
@@ -54,7 +54,7 @@ return getValue("ObjectNumber")
 From column: _Classification_
 ``` python
 if getValue("Classification"):
-    return UM.uri_from_fields("thesauri/classification/", getValue("Classification"))
+    return AATTerm.get_aat_uri('npg',getValue("Classification"))
 else:
     return ''
 ```
