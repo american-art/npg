@@ -1,4 +1,4 @@
-# NPGObjConXrefs2_Sheet1
+# NPGObjConXrefs2.csv
 
 ## Add Column
 
@@ -101,12 +101,19 @@ From column: _MakerConstituentID_
 return getValue("MakerConstituentID")
 ```
 
+#### _ProductionURI_
+From column: _ConstituentID_
+``` python
+return getValue("ObjectURI")+"/production"
+```
+
 
 ## Selections
 
 ## Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
+| _ConstituentID_ | `uri` | `crm:E12_Production1`|
 | _MakerConstituentID_ | `rdfs:label` | `crm:E42_Identifier2`|
 | _MakerConstituentIDCopy_ | `rdf:value` | `crm:E42_Identifier2`|
 | _MakerConstituentURI_ | `uri` | `owl:Thing2`|
