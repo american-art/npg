@@ -1,4 +1,4 @@
-# NPGConAltNames2_Sheet1
+# NPGConAltNames2.csv
 
 ## Add Column
 
@@ -31,7 +31,7 @@ return getValue("ConstituentURI") + "/alt_name"
 |  ----- | -------- | ----- |
 | _AltNameTypeURI_ | `uri` | `crm:E55_Type1`|
 | _AltNameURI_ | `uri` | `crm:E82_Actor_Appellation1`|
-| _ConstituentURI_ | `uri` | `owl:Thing1`|
+| _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
 | _DisplayName_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
 | _NameType_ | `skos:prefLabel` | `crm:E55_Type1`|
 
@@ -39,5 +39,5 @@ return getValue("ConstituentURI") + "/alt_name"
 ## Links
 | From | Property | To |
 |  --- | -------- | ---|
+| `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation1`|
 | `crm:E82_Actor_Appellation1` | `crm:P2_has_type` | `crm:E55_Type1`|
-| `owl:Thing1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation1`|
