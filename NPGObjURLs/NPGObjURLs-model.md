@@ -1,71 +1,34 @@
-## NPGobjURLs_Sheet1
+# NPGObjURLs.csv
 
-### PyTransforms
+## Add Column
+
+## Add Node/Literal
+
+## PyTransforms
 #### _ObjectURI_
 From column: _ObjectID_
->``` python
-return "object/" + getValue("ObjectID")
+``` python
+return "object/"+getValue("ObjectID")
 ```
 
-#### _urlURI_
+#### _UrlURI_
 From column: _URL_
->``` python
-return getValue("ObjectURI") + "/url"
-```
-
-#### _URLType_
-From column: _urlURI_
->``` python
-return "URL"
-```
-
-#### _URLTypeURI_
-From column: _URLType_
->``` python
-return "thesauri/contact_point_type/URL"
+``` python
+return getValue("URL")
 ```
 
 
-### Semantic Types
+## Selections
+
+## Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
-| _Acquisition_ | `rdfs:label` | `crm:E55_Type3`|
-| _AcquisitionURI_ | `uri` | `crm:E55_Type3`|
-| _AltLabel_ | `rdfs:label` | `crm:E35_Title2`|
-| _Classification_ | `rdfs:label` | `crm:E55_Type1`|
-| _ClassificationURI_ | `uri` | `crm:E55_Type1`|
-| _DateBeginValid_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
-| _DateEndValid_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
-| _Dated_ | `rdfs:label` | `crm:E52_Time-Span1`|
-| _DimensionStringType_ | `rdfs:label` | `crm:E55_Type4`|
-| _DimensionStringTypeURI_ | `uri` | `crm:E55_Type4`|
-| _DimensionURI_ | `uri` | `crm:E54_Dimension1`|
-| _Dimensions_ | `crm:P3_has_note` | `crm:E54_Dimension1`|
-| _ExhTitle_ | `rdfs:label` | `crm:E41_Appellation1`|
-| _ExhibitionURI_ | `uri` | `crm:E7_Activity1`|
-| _ExhibitionUsageURI_ | `uri` | `crm:PC16_used_specific_object1`|
-| _Medium_ | `crm:P3_has_note` | `crm:E55_Type2`|
-| _Medium_ | `crm:P3_has_note` | `crm:E57_Material1`|
-| _MediumURI_ | `uri` | `crm:E57_Material1`|
-| _MediumURI_ | `uri` | `crm:E55_Type2`|
-| _ObjectNumber_ | `rdfs:label` | `crm:E42_Identifier1`|
-| _ObjectNumberURI_ | `uri` | `crm:E42_Identifier1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
-| _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
-| _PreferredLabel_ | `rdfs:label` | `crm:E35_Title1`|
-| _PrimaryTitleURI_ | `uri` | `crm:E35_Title1`|
-| _ProductionDateURI_ | `uri` | `crm:E52_Time-Span1`|
-| _ProductionURI_ | `uri` | `crm:E12_Production1`|
-| _TitleTranslateType_ | `rdfs:label` | `crm:E55_Type2`|
-| _TitleURI_ | `uri` | `crm:E35_Title2`|
-| _URL_ | `rdfs:label` | `crm:E51_Contact_Point1`|
-| _URLType_ | `rdfs:label` | `crm:E55_Type1`|
-| _URLTypeURI_ | `uri` | `crm:E55_Type1`|
-| _urlURI_ | `uri` | `crm:E51_Contact_Point1`|
+| _URL_ | `rdfs:label` | `foaf:Document1`|
+| _UrlURI_ | `uri` | `foaf:Document1`|
 
 
-### Links
+## Links
 | From | Property | To |
 |  --- | -------- | ---|
-| `crm:E22_Man-Made_Object1` | `crm:P76_has_contact_point` | `crm:E51_Contact_Point1`|
-| `crm:E51_Contact_Point1` | `crm:P2_has_type` | `crm:E55_Type1`|
+| `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
