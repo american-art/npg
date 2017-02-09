@@ -14,7 +14,7 @@ return UM.uri_from_fields("person-institution/", getValue("ConstituentID"))
 #### _AltNameTypeURI_
 From column: _NameType_
 ``` python
-return UM.uri_from_fields("thesauri/alt_name_type/", getValue("NameType"))
+return UM.uri_from_fields(getValue("ConstituentURI")+"/",getValue("NameType"))
 ```
 
 #### _AltNameURI_
