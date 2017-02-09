@@ -5,43 +5,43 @@ label="NPGObjConXrefs2.csv"
 subgraph cluster {
 label="model"
 n2[style="filled",color="white",fillcolor="lightgray",label="E12_Production1"];
-n3[style="filled",color="white",fillcolor="lightgray",label="Thing2"];
+n3[style="filled",color="white",fillcolor="lightgray",label="E39_Actor1"];
 n4[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object1"];
-n5[style="filled",color="white",fillcolor="lightgray",label="Thing1"];
-n6[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier1"];
-n7[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
-n8[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier2"];
+n5[style="filled",color="white",fillcolor="lightgray",label="E39_Actor2"];
+n6[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier2"];
+n7[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier1"];
+n8[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
 n9[style="filled",color="white",fillcolor="lightgray",label="E55_Type2"];
 n10[shape="plaintext",style="filled",fillcolor="gold",label="PreferredTermsURI2"];
-n11[shape="plaintext",style="filled",fillcolor="gold",label="MakerConstituentURI"];
+n11[shape="plaintext",style="filled",fillcolor="gold",label="MakerConstituentIDCopy"];
 n12[shape="plaintext",style="filled",fillcolor="gold",label="PreferredTermsURI"];
-n13[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
-n14[shape="plaintext",style="filled",fillcolor="gold",label="SitterConstituentURI"];
+n13[shape="plaintext",style="filled",fillcolor="gold",label="SitterConstituentURI"];
+n14[shape="plaintext",style="filled",fillcolor="gold",label="SitterPreferredIDURI"];
 n15[shape="plaintext",style="filled",fillcolor="gold",label="MakerPreferredIDURI"];
-n16[shape="plaintext",style="filled",fillcolor="gold",label="SitterPreferredIDURI"];
-n17[shape="plaintext",style="filled",fillcolor="gold",label="SitterConstituentID"];
-n18[shape="plaintext",style="filled",fillcolor="gold",label="MakerConstituentIDCopy"];
-n19[shape="plaintext",style="filled",fillcolor="gold",label="SitterConstituentIDCopy"];
-n20[shape="plaintext",style="filled",fillcolor="gold",label="ConstituentID"];
-n21[shape="plaintext",style="filled",fillcolor="gold",label="MakerConstituentID"];
+n16[shape="plaintext",style="filled",fillcolor="gold",label="MakerConstituentID"];
+n17[shape="plaintext",style="filled",fillcolor="gold",label="SitterConstituentIDCopy"];
+n18[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
+n19[shape="plaintext",style="filled",fillcolor="gold",label="ProductionURI"];
+n20[shape="plaintext",style="filled",fillcolor="gold",label="SitterConstituentID"];
+n21[shape="plaintext",style="filled",fillcolor="gold",label="MakerConstituentURI"];
 }
 n2 -> n3[color="brown",fontcolor="black",label="P14_carried_out_by"]
 n4 -> n2[color="brown",fontcolor="black",label="P108i_was_produced_by"]
 n4 -> n5[color="brown",fontcolor="black",label="P62_depicts"]
-n6 -> n7[color="brown",fontcolor="black",label="P2_has_type"]
-n8 -> n9[color="brown",fontcolor="black",label="P2_has_type"]
-n5 -> n6[color="brown",fontcolor="black",label="P1_is_identified_by"]
-n3 -> n8[color="brown",fontcolor="black",label="P1_is_identified_by"]
+n3 -> n6[color="brown",fontcolor="black",label="P1_is_identified_by"]
+n5 -> n7[color="brown",fontcolor="black",label="P1_is_identified_by"]
+n7 -> n8[color="brown",fontcolor="black",label="P2_has_type"]
+n6 -> n9[color="brown",fontcolor="black",label="P2_has_type"]
 n9 -> n10[color="brown",fontcolor="black",label="classLink"]
-n3 -> n11[color="brown",fontcolor="black",label="classLink"]
-n7 -> n12[color="brown",fontcolor="black",label="classLink"]
-n4 -> n13[color="brown",fontcolor="black",label="classLink"]
-n5 -> n14[color="brown",fontcolor="black",label="classLink"]
-n8 -> n15[color="brown",fontcolor="black",label="classLink"]
-n6 -> n16[color="brown",fontcolor="black",label="classLink"]
-n6 -> n17[color="brown",fontcolor="black",label="label"]
-n8 -> n18[color="brown",fontcolor="black",label="value"]
-n6 -> n19[color="brown",fontcolor="black",label="value"]
-n2 -> n20[color="brown",fontcolor="black",label="classLink"]
-n8 -> n21[color="brown",fontcolor="black",label="label"]
+n6 -> n11[color="brown",fontcolor="black",label="value"]
+n8 -> n12[color="brown",fontcolor="black",label="classLink"]
+n5 -> n13[color="brown",fontcolor="black",label="classLink"]
+n7 -> n14[color="brown",fontcolor="black",label="classLink"]
+n6 -> n15[color="brown",fontcolor="black",label="classLink"]
+n6 -> n16[color="brown",fontcolor="black",label="label"]
+n7 -> n17[color="brown",fontcolor="black",label="value"]
+n4 -> n18[color="brown",fontcolor="black",label="classLink"]
+n2 -> n19[color="brown",fontcolor="black",label="classLink"]
+n7 -> n20[color="brown",fontcolor="black",label="label"]
+n3 -> n21[color="brown",fontcolor="black",label="classLink"]
 }
