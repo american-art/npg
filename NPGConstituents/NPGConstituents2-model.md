@@ -1,4 +1,4 @@
-# NPGConstituents2_Sheet1
+# NPGConstituents2.csv
 
 ## Add Column
 
@@ -113,7 +113,7 @@ return UM.uri_from_fields("person-institution/", getValue("ConstituentID"))
 From column: _BeginDate_
 ``` python
 if getValue("ValidBirthYear"):
-    return getValue("ConstituentURI") + "/birth_timespan"
+    return getValue("BirthURI") + "/birth_timespan"
 else:
     return ''
 ```
@@ -131,7 +131,7 @@ else:
 From column: _EndDate_
 ``` python
 if getValue("ValidDeathYear"):
-    return getValue("ConstituentURI") + "/death_timespan"
+    return getValue("DeathURI") + "/death_timespan"
 else:
     return ''
 ```
