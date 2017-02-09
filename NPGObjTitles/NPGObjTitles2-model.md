@@ -1,4 +1,4 @@
-# NPGObjTitles2_Sheet1
+# NPGObjTitles2.csv
 
 ## Add Column
 
@@ -46,6 +46,13 @@ return UM.uri_from_fields("object/", getValue("ObjectID"))
 
 
 ## Selections
+#### _DEFAULT_TEST_
+From column: _ObjectID_
+<br>Operation: `Union`
+``` python
+return getValue("DisplayOrder")!="1"
+```
+
 
 ## Semantic Types
 | Column | Property | Class |
