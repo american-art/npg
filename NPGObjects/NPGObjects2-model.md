@@ -54,7 +54,7 @@ return getValue("ObjectNumber")
 From column: _Classification_
 ``` python
 if getValue("Classification"):
-    return AATTerm.get_aat_uri('npg',getValue("Classification"))
+    return UM.uri_from_fields("thesauri/classification/", getValue("Classification"))
 else:
     return ''
 ```
@@ -63,8 +63,8 @@ else:
 From column: _Classification_
 ``` python
 if getValue("Classification"):
-    prefix = getValue("ObjectURI") + "/classification_event/"
-    return UM.uri_from_fields(prefix, getValue("Classification"))
+    prefix = getValue("ObjectURI") + "/classification_event"
+    return prefix
 else:
     return ''
 ```
@@ -181,7 +181,6 @@ else:
 | _MaterialComponentsURI_ | `uri` | `crm:E55_Type5`|
 | _Medium_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _MediumURI_ | `uri` | `crm:E33_Linguistic_Object1`|
-| _ObjectID_ | `rdfs:label` | `crm:E42_Identifier1`|
 | _ObjectIDCopy_ | `rdf:value` | `crm:E42_Identifier1`|
 | _ObjectIDURI_ | `uri` | `crm:E42_Identifier1`|
 | _ObjectNumber_ | `rdfs:label` | `crm:E42_Identifier2`|
