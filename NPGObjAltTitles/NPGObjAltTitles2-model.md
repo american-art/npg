@@ -17,10 +17,7 @@ else:
 #### _TitleURI_
 From column: _Title_
 ``` python
-if getValue("DisplayOrder") == '1':
-    return UM.uri_from_fields("thesauri/title/", getValue("Title"))
-else:
-    return ''
+return UM.uri_from_fields("thesauri/title/", getValue("Title"))
 ```
 
 #### _PreferredTitle_
@@ -44,6 +41,18 @@ From column: _ObjectID_
 return UM.uri_from_fields("object/", getValue("ObjectID"))
 ```
 
+#### _AlternateTitleType_
+From column: _DisplayOrder_
+``` python
+return "Alternate Title"
+```
+
+#### _AltTitleTypeURI_
+From column: _DisplayOrder_
+``` python
+return getValue("TitleURI")+"/title_type"
+```
+
 
 ## Selections
 #### _DEFAULT_TEST_
@@ -57,6 +66,8 @@ return getValue("DisplayOrder")=="1"
 ## Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
+| _AltTitleTypeURI_ | `uri` | `crm:E55_Type1`|
+| _AlternateTitleType_ | `skos:prefLabel` | `crm:E55_Type1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _PreferredTitleCopy_ | `rdf:value` | `crm:E35_Title1`|
 | _TitleURI_ | `uri` | `crm:E35_Title1`|
@@ -66,3 +77,4 @@ return getValue("DisplayOrder")=="1"
 | From | Property | To |
 |  --- | -------- | ---|
 | `crm:E22_Man-Made_Object1` | `crm:P102_has_title` | `crm:E35_Title1`|
+| `crm:E35_Title1` | `crm:P2_has_type` | `crm:E55_Type1`|
