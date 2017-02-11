@@ -20,19 +20,19 @@ return str(int(float(getValue("Dimension"))*10)/10.0)
 #### _PartURI_
 From column: _DimItemElemXrefID_
 ``` python
-return getValue("ObjectURI")+"/element"
+return UM.uri_from_fields(getValue("ObjectURI")+"/",getValue("Element"))
 ```
 
 #### _DimensionURI_
 From column: _Element_
 ``` python
-return getValue("PartURI")+"/dimension"
+return getValue("PartURI")+"/"+getValue("DimensionType").lower()+"/dimension"
 ```
 
 #### _TypeURI_
 From column: _ElementRank_
 ``` python
-return getValue("DimensionURI")+"/"+getValue("DimensionType").lower()
+return UM.uri_from_fields("thesauri/dimension_type/",getValue("DimensionType"))
 ```
 
 
@@ -42,11 +42,11 @@ return getValue("DimensionURI")+"/"+getValue("DimensionType").lower()
 | Column | Property | Class |
 |  ----- | -------- | ----- |
 | _DimensionClean_ | `rdf:value` | `crm:E54_Dimension1`|
-| _DimensionPart_ | `uri` | `crm:E18_Physical_Thing1`|
 | _DimensionType_ | `skos:prefLabel` | `crm:E55_Type1`|
 | _DimensionURI_ | `uri` | `crm:E54_Dimension1`|
 | _Element_ | `rdfs:label` | `crm:E18_Physical_Thing1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
+| _PartURI_ | `uri` | `crm:E18_Physical_Thing1`|
 | _TypeURI_ | `uri` | `crm:E55_Type1`|
 
 
