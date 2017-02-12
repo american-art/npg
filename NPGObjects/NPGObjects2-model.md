@@ -3,6 +3,16 @@
 ## Add Column
 
 ## Add Node/Literal
+#### Literal Node: `http://vocab.getty.edu/aat/300404621`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
+#### Literal Node: `http://vocab.getty.edu/aat/300404670`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ObjectURI_
@@ -188,10 +198,8 @@ else:
 | _ObjectNumberCopy_ | `rdf:value` | `crm:E42_Identifier2`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _PreferredIDURI_ | `uri` | `crm:E42_Identifier2`|
-| _PreferredTermsURI_ | `uri` | `crm:E55_Type2`|
 | _ProductionTimeSpanURI_ | `uri` | `crm:E52_Time-Span1`|
 | _ProductionURI_ | `uri` | `crm:E12_Production1`|
-| _RepositoryTermsURI_ | `uri` | `crm:E55_Type1`|
 | _VisualWorksURI_ | `uri` | `crm:E55_Type4`|
 
 
@@ -212,5 +220,5 @@ else:
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `crm:E55_Type5`|
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `crm:E55_Type6`|
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `crm:E55_Type7`|
-| `crm:E42_Identifier1` | `crm:P2_has_type` | `crm:E55_Type1`|
-| `crm:E42_Identifier2` | `crm:P2_has_type` | `crm:E55_Type2`|
+| `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404621`|
+| `crm:E42_Identifier2` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
