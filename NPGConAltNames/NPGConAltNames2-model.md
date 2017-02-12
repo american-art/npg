@@ -14,13 +14,13 @@ return UM.uri_from_fields("person-institution/", getValue("ConstituentID"))
 #### _AltNameTypeURI_
 From column: _NameType_
 ``` python
-return UM.uri_from_fields(getValue("ConstituentURI")+"/",getValue("NameType"))
+return UM.uri_from_fields("thesauri/name_type/",getValue("NameType"))
 ```
 
 #### _AltNameURI_
 From column: _AltNameTypeURI_
 ``` python
-return getValue("ConstituentURI") + "/alt_name"
+return UM.uri_from_fields(getValue("ConstituentURI")+"/",getValue("NameType"))
 ```
 
 
@@ -32,7 +32,6 @@ return getValue("ConstituentURI") + "/alt_name"
 | _AltNameTypeURI_ | `uri` | `crm:E55_Type1`|
 | _AltNameURI_ | `uri` | `crm:E82_Actor_Appellation1`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
-| _DisplayName_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
 | _NameType_ | `skos:prefLabel` | `crm:E55_Type1`|
 
 
