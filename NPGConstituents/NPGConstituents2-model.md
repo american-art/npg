@@ -109,10 +109,10 @@ From column: _ConstituentID_
 return UM.uri_from_fields("person-institution/", getValue("ConstituentID"))
 ```
 
-#### _BirthTimespanURI_
+#### _NottInUse_
 From column: _BeginDate_
 ``` python
-if getValue("ValidBirthYear"):
+if (getValue("BeginDate") != '0') and (getValue("ConstituentType") == 'Individual'):
     return getValue("BirthURI") + "/birth_timespan"
 else:
     return ''
@@ -127,10 +127,10 @@ else:
     return ''
 ```
 
-#### _DeathTimespanURI_
+#### _NotInUse1_
 From column: _EndDate_
 ``` python
-if getValue("ValidDeathYear"):
+if (getValue("EndDate") != '0') and (getValue("ConstituentType") == 'Individual'):
     return getValue("DeathURI") + "/death_timespan"
 else:
     return ''
@@ -298,6 +298,20 @@ else:
     return ''
 ```
 
+#### _BirthTimeSpanURI_
+From column: _BeginDate_
+``` python
+if getValue("BirthURI"):
+    return getValue("BirthURI")+"/timespan"
+```
+
+#### _DeathTimeSpanURI_
+From column: _EndDate_
+``` python
+if getValue("DeathURI"):
+    return getValue("DeathURI")+"/timespan"
+```
+
 
 ## Selections
 
@@ -306,10 +320,10 @@ else:
 |  ----- | -------- | ----- |
 | _ActorAppellationURI_ | `uri` | `crm:E82_Actor_Appellation1`|
 | _AlphaSort_ | `rdf:value` | `crm:E82_Actor_Appellation2`|
-| _BirthTimespanURI_ | `uri` | `crm:E52_Time-Span1`|
+| _BirthTimeSpanURI_ | `uri` | `crm:E52_Time-Span1`|
 | _BirthURI_ | `uri` | `crm:E63_Beginning_of_Existence1`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
-| _DeathTimespanURI_ | `uri` | `crm:E52_Time-Span2`|
+| _DeathTimeSpanURI_ | `uri` | `crm:E52_Time-Span2`|
 | _DeathURI_ | `uri` | `crm:E64_End_of_Existence1`|
 | _DisplayName_ | `rdfs:label` | `crm:E39_Actor1`|
 | _DisplayNameCopy_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
