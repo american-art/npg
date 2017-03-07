@@ -13,6 +13,11 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `http://vocab.getty.edu/ulan/500239941`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ObjectURI_
@@ -170,6 +175,18 @@ else:
     return ''
 ```
 
+#### _OwnerURI_
+From column: _ObjectIDURI_
+``` python
+return "http://npg.si.edu/"
+```
+
+#### _OwnerLabel_
+From column: _OwnerURI_
+``` python
+return "National Portrait Gallery"
+```
+
 
 ## Selections
 
@@ -197,6 +214,8 @@ else:
 | _ObjectNumber_ | `rdfs:label` | `crm:E42_Identifier2`|
 | _ObjectNumberCopy_ | `rdf:value` | `crm:E42_Identifier2`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
+| _OwnerLabel_ | `rdfs:label` | `crm:E40_Legal_Body1`|
+| _OwnerURI_ | `uri` | `crm:E40_Legal_Body1`|
 | _PreferredIDURI_ | `uri` | `crm:E42_Identifier2`|
 | _ProductionTimeSpanURI_ | `uri` | `crm:E52_Time-Span1`|
 | _ProductionURI_ | `uri` | `crm:E12_Production1`|
@@ -214,11 +233,13 @@ else:
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object1`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object2`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object3`|
+| `crm:E22_Man-Made_Object1` | `crm:P52_has_current_owner` | `crm:E40_Legal_Body1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier2`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type3`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `crm:E55_Type5`|
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `crm:E55_Type6`|
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `crm:E55_Type7`|
-| `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404621`|
-| `crm:E42_Identifier2` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
+| `crm:E40_Legal_Body1` | `skos:exactMatch` | `http://vocab.getty.edu/ulan/500239941`|
+| `crm:E42_Identifier1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404621`|
+| `crm:E42_Identifier2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
