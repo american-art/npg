@@ -130,13 +130,19 @@ return "12-31-" + getValue("DateEnd")
 #### _ProductionURI_
 From column: _ObjectURI_
 ``` python
-return getValue("ObjectURI") + "/production"
+if getValue("DateBegin")=="0" and getValue("DateEnd")=="0":
+    return ""
+else:
+    return getValue("ObjectURI") + "/production"
 ```
 
 #### _ProductionTimeSpanURI_
 From column: _Dated_
 ``` python
-return getValue("ProductionURI") + "/timespan"
+if getValue("DateBegin")=="0" and getValue("DateEnd")=="0":
+    return ""
+else:
+    return getValue("ProductionURI") + "/timespan"
 ```
 
 #### _DimensionsAAT_
