@@ -116,7 +116,7 @@ From column: _DateBegin_
 ``` python
 if getValue("DateBegin") == 0:
     return ''
-return "01-01-" + getValue("DateBegin")
+return getValue("DateBegin")+"-01-01"
 ```
 
 #### _DateEndValid_
@@ -124,7 +124,7 @@ From column: _DateEnd_
 ``` python
 if getValue("DateEnd") == 0:
     return ''
-return "12-31-" + getValue("DateEnd")
+return getValue("DateEnd")+"-12-31"
 ```
 
 #### _ProductionURI_
