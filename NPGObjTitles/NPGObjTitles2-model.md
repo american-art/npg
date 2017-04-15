@@ -18,7 +18,7 @@ else:
 From column: _Title_
 ``` python
 if getValue("DisplayOrder") == '1':
-    return UM.uri_from_fields("thesauri/title/", getValue("Title"))
+    return UM.uri_from_fields(getValue("ObjectURI")+"/title/", getValue("Title"))
 else:
     return ''
 ```
