@@ -71,7 +71,7 @@ else:
 From column: _ValidBirthYear_
 ``` python
 if getValue("ValidBirthYear"):
-    return '01-01-' + getValue("ValidBirthYear")
+    return getValue("ValidBirthYear")+"-01-01"
 else:
     return ''
 ```
@@ -80,7 +80,7 @@ else:
 From column: _EarliestBirthdate_
 ``` python
 if getValue("ValidBirthYear"):
-    return '12-31-' + getValue("ValidBirthYear")
+    return getValue("ValidBirthYear")+"-12-31"
 else:
     return ''
 ```
@@ -89,7 +89,7 @@ else:
 From column: _ValidDeathYear_
 ``` python
 if getValue("ValidDeathYear"):
-    return '01-01-' + getValue("ValidDeathYear")
+    return getValue("ValidDeathYear")+"-01-01"
 else:
     return ''
 ```
@@ -98,7 +98,7 @@ else:
 From column: _EarliestDeathdate_
 ``` python
 if getValue("ValidDeathYear"):
-    return '12-31-' + getValue("ValidDeathYear")
+    return getValue("ValidDeathYear")+"-12-31"
 else:
     return ''
 ```
@@ -167,7 +167,7 @@ return getValue("ConstituentURI") + "/sort_name"
 From column: _NameTitle_
 ``` python
 if getValue("NameTitle") != 'NULL':
-    return getValue("ConstituentURI") + "/name_prefix_type_class"
+    return "thesauri/name_type/prefix"
 else:
     return ''
 ```
@@ -176,7 +176,7 @@ else:
 From column: _NameTitle_
 ``` python
 if getValue("NameTitle") != 'NULL':
-    return getValue("ConstituentURI") + "/name_prefix_class"
+    return getValue("ConstituentURI") + "/name_prefix"
 else:
     return ''
 ```
@@ -194,7 +194,7 @@ else:
 From column: _FirstName_
 ``` python
 if getValue("FirstName") != 'NULL':
-    return getValue("ConstituentURI") + "/given_name_type_class"
+    return "thesauri/name_type/first_name"
 else:
     return ''
 ```
@@ -203,7 +203,7 @@ else:
 From column: _FirstName_
 ``` python
 if getValue("FirstName") != 'NULL':
-    return getValue("ConstituentURI") + "/given_name_class"
+    return getValue("ConstituentURI") + "/given_name"
 else:
     return ''
 ```
@@ -221,7 +221,7 @@ else:
 From column: _MiddleName_
 ``` python
 if getValue("MiddleName") != 'NULL':
-    return getValue("ConstituentURI") + "/middle_name_type_class"
+    return "thesauri/name_type/middle_name"
 else:
     return ''
 ```
@@ -230,7 +230,7 @@ else:
 From column: _MiddleName_
 ``` python
 if getValue("MiddleName") != 'NULL':
-    return getValue("ConstituentURI") + "middle_name_class"
+    return getValue("ConstituentURI") + "/middle_name"
 else:
     return ''
 ```
@@ -248,7 +248,7 @@ else:
 From column: _LastName_
 ``` python
 if getValue("LastName") != 'NULL':
-    return getValue("ConstituentURI") + "/family_name_type_class"
+    return "thesauri/name_type/family_name"
 else:
     return ''
 ```
@@ -257,7 +257,7 @@ else:
 From column: _LastName_
 ``` python
 if getValue("LastName") != 'NULL':
-    return getValue("ConstituentURI") + "/family_name_class"
+    return getValue("ConstituentURI") + "/family_name"
 else:
     return ''
 ```
@@ -275,7 +275,7 @@ else:
 From column: _Suffix_
 ``` python
 if getValue("Suffix") != 'NULL':
-    return getValue("ConstituentURI") + "/name_suffix_type_class"
+    return "thesauri/name_type/suffix"
 else:
     return ''
 ```
@@ -284,7 +284,7 @@ else:
 From column: _Suffix_
 ``` python
 if getValue("Suffix") != 'NULL':
-    return getValue("ConstituentURI") + "/name_suffix_class"
+    return getValue("ConstituentURI") + "/name_suffix"
 else:
     return ''
 ```
@@ -312,6 +312,24 @@ if getValue("DeathURI"):
     return getValue("DeathURI")+"/timespan"
 ```
 
+#### _NameLabel_
+From column: _DisplayNameCopy_
+``` python
+return getValue("DisplayName")
+```
+
+#### _ID_Label_
+From column: _ConstituentID_
+``` python
+return getValue("ConstituentID")
+```
+
+#### _ID_URI_
+From column: _ID_Label_
+``` python
+return getValue("ConstituentID")+"/pref_id"
+```
+
 
 ## Selections
 
@@ -322,6 +340,7 @@ if getValue("DeathURI"):
 | _AlphaSort_ | `rdf:value` | `crm:E82_Actor_Appellation2`|
 | _BirthTimeSpanURI_ | `uri` | `crm:E52_Time-Span1`|
 | _BirthURI_ | `uri` | `crm:E63_Beginning_of_Existence1`|
+| _ConstituentID_ | `rdf:value` | `crm:E42_Identifier1`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
 | _DeathTimeSpanURI_ | `uri` | `crm:E52_Time-Span2`|
 | _DeathURI_ | `uri` | `crm:E64_End_of_Existence1`|
@@ -335,11 +354,14 @@ if getValue("DeathURI"):
 | _FirstNameValid_ | `rdf:value` | `crm:E82_Actor_Appellation4`|
 | _GivenNameClassURI_ | `uri` | `crm:E82_Actor_Appellation4`|
 | _GivenNameTypeClass_ | `uri` | `crm:E55_Type2`|
+| _ID_Label_ | `rdfs:label` | `crm:E42_Identifier1`|
+| _ID_URI_ | `uri` | `crm:E42_Identifier1`|
 | _LatestBirthdate_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | _LatestDeathdate_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span2`|
 | _MiddleNameClassURI_ | `uri` | `crm:E82_Actor_Appellation5`|
 | _MiddleNameTypeClassURI_ | `uri` | `crm:E55_Type3`|
 | _MiddleNameValid_ | `rdf:value` | `crm:E82_Actor_Appellation5`|
+| _NameLabel_ | `rdfs:label` | `crm:E82_Actor_Appellation1`|
 | _NamePrefixClassURI_ | `uri` | `crm:E82_Actor_Appellation3`|
 | _NamePrefixTypeClassURI_ | `uri` | `crm:E55_Type1`|
 | _NamePrefixValid_ | `rdf:value` | `crm:E82_Actor_Appellation3`|
@@ -354,15 +376,16 @@ if getValue("DeathURI"):
 ## Links
 | From | Property | To |
 |  --- | -------- | ---|
+| `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E39_Actor1` | `crm:P92i_was_brought_into_existence_by` | `crm:E63_Beginning_of_Existence1`|
 | `crm:E39_Actor1` | `crm:P93i_was_taken_out_of_existence_by` | `crm:E64_End_of_Existence1`|
 | `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation1`|
 | `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation2`|
-| `crm:E55_Type1` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404845`|
-| `crm:E55_Type2` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404651`|
-| `crm:E55_Type3` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404654`|
-| `crm:E55_Type4` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404652`|
-| `crm:E55_Type5` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404662`|
+| `crm:E55_Type1` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404845`|
+| `crm:E55_Type2` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404651`|
+| `crm:E55_Type3` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404654`|
+| `crm:E55_Type4` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404652`|
+| `crm:E55_Type5` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404662`|
 | `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E64_End_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
 | `crm:E82_Actor_Appellation1` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation3`|
@@ -370,8 +393,8 @@ if getValue("DeathURI"):
 | `crm:E82_Actor_Appellation1` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation5`|
 | `crm:E82_Actor_Appellation1` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation6`|
 | `crm:E82_Actor_Appellation1` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation7`|
-| `crm:E82_Actor_Appellation1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
-| `crm:E82_Actor_Appellation2` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404672`|
+| `crm:E82_Actor_Appellation1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
+| `crm:E82_Actor_Appellation2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404672`|
 | `crm:E82_Actor_Appellation3` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E82_Actor_Appellation4` | `crm:P2_has_type` | `crm:E55_Type2`|
 | `crm:E82_Actor_Appellation5` | `crm:P2_has_type` | `crm:E55_Type3`|
