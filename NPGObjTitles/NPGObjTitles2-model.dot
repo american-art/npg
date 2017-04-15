@@ -9,15 +9,15 @@ n3[style="filled",color="white",fillcolor="lightgray",label="E35_Title1"];
 n4[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
 n5[shape="plaintext",style="filled",fillcolor="gold",label="PreferredTitle"];
 n6[shape="plaintext",style="filled",fillcolor="gold",label="PreferredTitleCopy"];
-n7[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
-n8[shape="plaintext",style="filled",fillcolor="gold",label="PreferredTermsURI"];
-n9[shape="plaintext",style="filled",fillcolor="gold",label="TitleURI"];
+n7[shape="plaintext",style="filled",fillcolor="gold",label="PreferredTermsURI"];
+n8[shape="plaintext",style="filled",fillcolor="gold",label="TitleURI"];
+n9[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
 }
 n2 -> n3[color="brown",fontcolor="black",label="P102_has_title"]
 n3 -> n4[color="brown",fontcolor="black",label="P2_has_type"]
 n2 -> n5[color="brown",fontcolor="black",label="label"]
 n3 -> n6[color="brown",fontcolor="black",label="value"]
-n2 -> n7[color="brown",fontcolor="black",label="classLink"]
-n4 -> n8[color="brown",fontcolor="black",label="classLink"]
-n3 -> n9[color="brown",fontcolor="black",label="classLink"]
+n4 -> n7[color="brown",fontcolor="black",label="classLink"]
+n3 -> n8[color="brown",fontcolor="black",label="classLink"]
+n2 -> n9[color="brown",fontcolor="black",label="classLink"]
 }
