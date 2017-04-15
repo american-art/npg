@@ -1,29 +1,41 @@
 digraph n0 {
 fontcolor="blue"
 remincross="true"
-label="NPGDimsParsedUpdate2May.csv"
+label="NPGDimsParsedUpdate1Nov.csv"
 subgraph cluster {
 label="model"
 n2[style="filled",color="white",fillcolor="lightgray",label="E18_Physical_Thing1"];
 n3[style="filled",color="white",fillcolor="lightgray",label="E54_Dimension1"];
 n4[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object1"];
-n5[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
-n6[shape="plaintext",style="filled",fillcolor="gold",label="DimensionType"];
-n7[shape="plaintext",style="filled",fillcolor="gold",label="PartURI"];
-n8[shape="plaintext",style="filled",fillcolor="gold",label="DimensionClean"];
-n9[shape="plaintext",style="filled",fillcolor="gold",label="TypeURI"];
-n10[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
-n11[shape="plaintext",style="filled",fillcolor="gold",label="Element"];
-n12[shape="plaintext",style="filled",fillcolor="gold",label="DimensionURI"];
+n5[style="filled",color="white",fillcolor="lightgray",label="E33_Linguistic_Object1"];
+n6[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
+n7[style="filled",color="white",fillcolor="lightgray",label="E58_Measurement_Unit1"];
+n8[shape="plaintext",style="filled",fillcolor="gold",label="DimensionTextURI"];
+n9[shape="plaintext",style="filled",fillcolor="gold",label="DimensionURI"];
+n10[shape="plaintext",style="filled",fillcolor="gold",label="PrimaryUnit"];
+n11[shape="plaintext",style="filled",fillcolor="gold",label="DimensionClean"];
+n12[shape="plaintext",style="filled",fillcolor="gold",label="UnitURI"];
+n13[shape="plaintext",style="filled",fillcolor="gold",label="Element"];
+n14[shape="plaintext",style="filled",fillcolor="gold",label="TypeURI"];
+n15[shape="plaintext",style="filled",fillcolor="gold",label="DisplayDimensions"];
+n16[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
+n17[shape="plaintext",style="filled",fillcolor="gold",label="DimensionType"];
+n18[shape="plaintext",style="filled",fillcolor="gold",label="PartURI"];
 }
 n2 -> n3[color="brown",fontcolor="black",label="P43_has_dimension"]
 n4 -> n2[color="brown",fontcolor="black",label="P46_is_composed_of"]
-n3 -> n5[color="brown",fontcolor="black",label="P2_has_type"]
-n5 -> n6[color="brown",fontcolor="black",label="prefLabel"]
-n2 -> n7[color="brown",fontcolor="black",label="classLink"]
-n3 -> n8[color="brown",fontcolor="black",label="value"]
-n5 -> n9[color="brown",fontcolor="black",label="classLink"]
-n4 -> n10[color="brown",fontcolor="black",label="classLink"]
-n2 -> n11[color="brown",fontcolor="black",label="label"]
-n3 -> n12[color="brown",fontcolor="black",label="classLink"]
+n4 -> n5[color="brown",fontcolor="black",label="P67i_is_referred_to_by"]
+n3 -> n6[color="brown",fontcolor="black",label="P2_has_type"]
+n3 -> n7[color="brown",fontcolor="black",label="P91_has_unit"]
+n5 -> n8[color="brown",fontcolor="black",label="classLink"]
+n3 -> n9[color="brown",fontcolor="black",label="classLink"]
+n7 -> n10[color="brown",fontcolor="black",label="prefLabel"]
+n3 -> n11[color="brown",fontcolor="black",label="value"]
+n7 -> n12[color="brown",fontcolor="black",label="classLink"]
+n2 -> n13[color="brown",fontcolor="black",label="label"]
+n6 -> n14[color="brown",fontcolor="black",label="classLink"]
+n5 -> n15[color="brown",fontcolor="black",label="value"]
+n4 -> n16[color="brown",fontcolor="black",label="classLink"]
+n6 -> n17[color="brown",fontcolor="black",label="prefLabel"]
+n2 -> n18[color="brown",fontcolor="black",label="classLink"]
 }
