@@ -327,7 +327,7 @@ return getValue("ConstituentID")
 #### _ID_URI_
 From column: _ID_Label_
 ``` python
-return getValue("ConstituentID")+"/pref_id"
+return getValue("ConstituentURI")+"/pref_id"
 ```
 
 
@@ -381,6 +381,7 @@ return getValue("ConstituentID")+"/pref_id"
 | `crm:E39_Actor1` | `crm:P93i_was_taken_out_of_existence_by` | `crm:E64_End_of_Existence1`|
 | `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation1`|
 | `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation2`|
+| `crm:E42_Identifier1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E55_Type1` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404845`|
 | `crm:E55_Type2` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404651`|
 | `crm:E55_Type3` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404654`|
