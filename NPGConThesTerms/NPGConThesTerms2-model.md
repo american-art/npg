@@ -1,4 +1,4 @@
-# NPGConThesTerms2.csv
+# NPGConThesTerms3.csv
 
 ## Add Column
 
@@ -51,7 +51,7 @@ else:
 From column: _Gender_
 ``` python
 if getValue("Gender"):
-    return getValue("ConstituentURI") + "/gender_type_class"
+    return getValue("GenderClassURI") + "/type"
 else:
     return ''
 ```
@@ -60,7 +60,7 @@ else:
 From column: _Gender_
 ``` python
 if getValue("Gender"):
-    return getValue("ConstituentURI") + "/gender_class"
+    return UM.uri_from_fields("thesauri/gender/", getValue("Gender"))
 else:
     return ''
 ```
