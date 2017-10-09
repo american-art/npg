@@ -17,7 +17,7 @@ else:
 #### _TitleURI_
 From column: _Title_
 ``` python
-return UM.uri_from_fields("thesauri/title/", getValue("Title"))
+return UM.uri_from_fields(getValue("ObjectURI") + "/title/", getValue("AlternateTitleType"))
 ```
 
 #### _PreferredTitle_
