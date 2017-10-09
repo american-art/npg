@@ -1,4 +1,4 @@
-# NPGObjects2.csv
+# NPGObjects3.csv
 
 ## Add Column
 
@@ -8,7 +8,7 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
-#### Literal Node: `http://vocab.getty.edu/aat/300404670`
+#### Literal Node: `http://vocab.getty.edu/aat/300312355`
 Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
@@ -208,9 +208,6 @@ return "National Portrait Gallery"
 | _DateBeginValid_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _DateEndValid_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | _Dated_ | `rdfs:label` | `crm:E52_Time-Span1`|
-| _Dimensions_ | `rdf:value` | `crm:E33_Linguistic_Object2`|
-| _DimensionsAAT_ | `uri` | `crm:E55_Type6`|
-| _DimensionsTextURI_ | `uri` | `crm:E33_Linguistic_Object2`|
 | _MaterialComponentsURI_ | `uri` | `crm:E55_Type5`|
 | _Medium_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _MediumURI_ | `uri` | `crm:E33_Linguistic_Object1`|
@@ -237,15 +234,13 @@ return "National Portrait Gallery"
 | `crm:E22_Man-Made_Object1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
 | `crm:E22_Man-Made_Object1` | `crm:P41i_was_classified_by` | `crm:E17_Type_Assignment1`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object1`|
-| `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object2`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object3`|
 | `crm:E22_Man-Made_Object1` | `crm:P52_has_current_owner` | `crm:E40_Legal_Body1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier2`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type3`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `crm:E55_Type5`|
-| `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `crm:E55_Type6`|
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `crm:E55_Type7`|
 | `crm:E40_Legal_Body1` | `skos:exactMatch` | `http://vocab.getty.edu/ulan/500239941`|
 | `crm:E42_Identifier1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404621`|
-| `crm:E42_Identifier2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
+| `crm:E42_Identifier2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300312355`|
