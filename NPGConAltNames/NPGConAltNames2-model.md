@@ -1,4 +1,4 @@
-# NPGConAltNames2.csv
+# NPGConAltNames3.csv
 
 ## Add Column
 
@@ -32,8 +32,8 @@ return UM.uri_from_fields(getValue("ConstituentURI")+"/",getValue("NameType"))
 | _AltNameTypeURI_ | `uri` | `crm:E55_Type1`|
 | _AltNameURI_ | `uri` | `crm:E82_Actor_Appellation1`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
-| _DisplayName_ | `rdfs:label` | `crm:E82_Actor_Appellation1`|
 | _DisplayName_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
+| _DisplayName_ | `rdfs:label` | `crm:E82_Actor_Appellation1`|
 | _NameType_ | `skos:prefLabel` | `crm:E55_Type1`|
 
 
