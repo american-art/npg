@@ -1,4 +1,4 @@
-# NPGObjTitles2.csv
+# NPGObjTitles3.csv
 
 ## Add Column
 
@@ -44,6 +44,15 @@ From column: _ObjectID_
 return UM.uri_from_fields("object/", getValue("ObjectID"))
 ```
 
+#### _TitleURI1_
+From column: _TitleURI_
+``` python
+if getValue("DisplayOrder") == '1':
+    return UM.uri_from_fields(getValue("ObjectURI")+"/title/", getValue("Title"))
+else:
+    return ''
+```
+
 
 ## Selections
 #### _DEFAULT_TEST_
@@ -61,7 +70,7 @@ return getValue("DisplayOrder")!="1"
 | _PreferredTermsURI_ | `uri` | `crm:E55_Type1`|
 | _PreferredTitle_ | `rdfs:label` | `crm:E22_Man-Made_Object1`|
 | _PreferredTitleCopy_ | `rdf:value` | `crm:E35_Title1`|
-| _TitleURI_ | `uri` | `crm:E35_Title1`|
+| _TitleURI1_ | `uri` | `crm:E35_Title1`|
 
 
 ## Links
