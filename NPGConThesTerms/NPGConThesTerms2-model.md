@@ -101,6 +101,15 @@ else:
     return ''
 ```
 
+#### _GenderTypeURI_
+From column: _GenderClassURI_
+``` python
+if getValue("Gender"):
+    return getValue("GenderClassURI") + "/type"
+else:
+    return ''
+```
+
 
 ## Selections
 
@@ -114,7 +123,7 @@ else:
 | _DeathLocationURI_ | `uri` | `crm:E53_Place2`|
 | _Gender_ | `rdfs:label` | `crm:E55_Type3`|
 | _GenderClassURI_ | `uri` | `crm:E55_Type3`|
-| _GenderTypeClassURI_ | `uri` | `crm:E55_Type2`|
+| _GenderTypeURI_ | `uri` | `crm:E55_Type2`|
 | _PlaceOfBirth_ | `rdfs:label` | `crm:E53_Place1`|
 | _PlaceOfDeath_ | `rdfs:label` | `crm:E53_Place2`|
 | _SexRoleURI_ | `uri` | `crm:E55_Type1`|
