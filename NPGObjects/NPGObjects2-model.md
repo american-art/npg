@@ -184,7 +184,7 @@ else:
 #### _OwnerURI_
 From column: _ObjectIDURI_
 ``` python
-return "http://data.americanartcollaborative.org/npg"
+return "http://data.npg.si.edu"
 ```
 
 #### _OwnerLabel_
