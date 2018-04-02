@@ -1,1802 +1,1806 @@
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix wot: <http://xmlns.com/wot/0.1/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix karma: <http://isi.edu/integration/karma/ontologies/model/current#> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix km-dev: <http://isi.edu/integration/karma/dev#> .
 
-_:node1brvt2odbx1 a km-dev:R2RMLMapping ;
+_:node1ca3jc69sx1 a km-dev:R2RMLMapping ;
 	km-dev:sourceName "NPGObjDimsParsed3.csv" ;
-	km-dev:modelPublicationTime "1507530465707"^^xsd:long ;
+	km-dev:modelPublicationTime "1522686892349"^^xsd:long ;
 	km-dev:modelVersion "1.7" ;
-	km-dev:hasInputColumns "[[{\"columnName\":\"DisplayDimensions\"}],[{\"columnName\":\"DimensionType\"}],[{\"columnName\":\"DimensionID\"}],[{\"columnName\":\"Dimension\"}],[{\"columnName\":\"PrimaryUnitID\"}],[{\"columnName\":\"ObjectID\"}],[{\"columnName\":\"Element\"}]]" ;
-	km-dev:hasOutputColumns "[[{\"columnName\":\"DisplayDimensions\"}],[{\"columnName\":\"DimensionType\"}],[{\"columnName\":\"UnitURI\"}],[{\"columnName\":\"PrimaryUnitID\"}],[{\"columnName\":\"DimensionTypeURI\"}],[{\"columnName\":\"DimensionTextURI\"}],[{\"columnName\":\"PartURI\"}],[{\"columnName\":\"Dimension_clean\"}],[{\"columnName\":\"Element\"}],[{\"columnName\":\"DimensionURI\"}],[{\"columnName\":\"ObjectURI\"}]]" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"DimensionID\"}],[{\"columnName\":\"ObjectID\"}],[{\"columnName\":\"Element\"}],[{\"columnName\":\"DimensionType\"}],[{\"columnName\":\"DisplayDimensions\"}],[{\"columnName\":\"Dimension\"}],[{\"columnName\":\"PrimaryUnitID\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"Dimension_clean\"}],[{\"columnName\":\"ObjectURI\"}],[{\"columnName\":\"PartURI\"}],[{\"columnName\":\"DimensionTypeURI\"}],[{\"columnName\":\"UnitURI\"}],[{\"columnName\":\"Element\"}],[{\"columnName\":\"DimensionType\"}],[{\"columnName\":\"DimensionTextURI\"}],[{\"columnName\":\"DisplayDimensions\"}],[{\"columnName\":\"PrimaryUnitID\"}],[{\"columnName\":\"DimensionURI\"}]]" ;
 	km-dev:hasModelLabel "NPGDims" ;
 	km-dev:hasBaseURI "http://localhost:8080/source/" ;
 	km-dev:hasWorksheetHistory """[
     {
-        \"tags\": [\"Transformation\"],
+        \"commandName\": \"SubmitPythonTransformationCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"ObjectID\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"ObjectID\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"newColumnName\",
-                \"value\": \"ObjectURI\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"ObjectURI\"
             },
             {
                 \"name\": \"transformationCode\",
-                \"value\": \"return \\\"object/\\\"+getValue(\\\"ObjectID\\\")\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"return \\\"object/\\\"+getValue(\\\"ObjectID\\\")\"
             },
             {
                 \"name\": \"errorDefaultValue\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"isJSONOutput\",
-                \"value\": \"false\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"false\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectID\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectID\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SubmitPythonTransformationCommand\"
+        \"tags\": [\"Transformation\"]
     },
     {
-        \"tags\": [\"Transformation\"],
+        \"commandName\": \"SubmitPythonTransformationCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"DisplayDimensions\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"DisplayDimensions\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"newColumnName\",
-                \"value\": \"DimensionTextURI\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DimensionTextURI\"
             },
             {
                 \"name\": \"transformationCode\",
-                \"value\": \"return getValue(\\\"ObjectURI\\\")+\\\"/dimension_text\\\"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"return getValue(\\\"ObjectURI\\\")+\\\"/dimension_text\\\"\"
             },
             {
                 \"name\": \"errorDefaultValue\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"isJSONOutput\",
-                \"value\": \"false\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"false\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionTextURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionTextURI\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SubmitPythonTransformationCommand\"
+        \"tags\": [\"Transformation\"]
     },
     {
-        \"tags\": [\"Transformation\"],
+        \"commandName\": \"SubmitPythonTransformationCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"Element\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Element\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"newColumnName\",
-                \"value\": \"PartURI\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"PartURI\"
             },
             {
                 \"name\": \"transformationCode\",
-                \"value\": \"return UM.uri_from_fields(getValue(\\\"ObjectURI\\\")+\\\"/\\\",getValue(\\\"Element\\\"))\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"return UM.uri_from_fields(getValue(\\\"ObjectURI\\\")+\\\"/\\\",getValue(\\\"Element\\\"))\"
             },
             {
                 \"name\": \"errorDefaultValue\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"isJSONOutput\",
-                \"value\": \"false\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"false\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Element\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"Element\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"PartURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"PartURI\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SubmitPythonTransformationCommand\"
+        \"tags\": [\"Transformation\"]
     },
     {
-        \"tags\": [\"Transformation\"],
+        \"commandName\": \"SubmitPythonTransformationCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"DimensionID\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"DimensionID\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"newColumnName\",
-                \"value\": \"DimensionURI\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DimensionURI\"
             },
             {
                 \"name\": \"transformationCode\",
-                \"value\": \"return getValue(\\\"PartURI\\\")+\\\"/dimension/\\\"+getValue(\\\"DimensionID\\\")\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"return getValue(\\\"PartURI\\\")+\\\"/dimension/\\\"+getValue(\\\"DimensionID\\\") + \\\"\\\"\"
             },
             {
                 \"name\": \"errorDefaultValue\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"isJSONOutput\",
-                \"value\": \"false\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"false\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionID\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"PartURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionID\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"PartURI\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionURI\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SubmitPythonTransformationCommand\"
+        \"tags\": [\"Transformation\"]
     },
     {
-        \"tags\": [\"Transformation\"],
+        \"commandName\": \"SubmitPythonTransformationCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"DimensionType\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"DimensionType\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"newColumnName\",
-                \"value\": \"DimensionTypeURI\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DimensionTypeURI\"
             },
             {
                 \"name\": \"transformationCode\",
-                \"value\": \"return UM.uri_from_fields(\\\"thesauri/dimension_type/\\\",getValue(\\\"DimensionType\\\"))\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"return UM.uri_from_fields(\\\"thesauri/dimension_type/\\\",getValue(\\\"DimensionType\\\"))\"
             },
             {
                 \"name\": \"errorDefaultValue\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"isJSONOutput\",
-                \"value\": \"false\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"false\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionType\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionType\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionTypeURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionTypeURI\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SubmitPythonTransformationCommand\"
+        \"tags\": [\"Transformation\"]
     },
     {
-        \"tags\": [\"Transformation\"],
+        \"commandName\": \"SubmitPythonTransformationCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"Dimension\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Dimension\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"newColumnName\",
-                \"value\": \"Dimension_clean\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"Dimension_clean\"
             },
             {
                 \"name\": \"transformationCode\",
-                \"value\": \"return str(int(float(getValue(\\\"Dimension\\\"))*10)/10.0)\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"return str(int(float(getValue(\\\"Dimension\\\"))*10)/10.0)\"
             },
             {
                 \"name\": \"errorDefaultValue\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"isJSONOutput\",
-                \"value\": \"false\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"false\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Dimension\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Dimension\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Dimension_clean\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Dimension_clean\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SubmitPythonTransformationCommand\"
+        \"tags\": [\"Transformation\"]
     },
     {
-        \"tags\": [\"Transformation\"],
+        \"commandName\": \"SubmitPythonTransformationCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"PrimaryUnitID\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"PrimaryUnitID\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"newColumnName\",
-                \"value\": \"UnitURI\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"UnitURI\"
             },
             {
                 \"name\": \"transformationCode\",
-                \"value\": \"return UM.uri_from_fields(\\\"thesauri/dimension_unit/\\\",getValue(\\\"PrimaryUnitID\\\"))\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"return UM.uri_from_fields(\\\"thesauri/dimension_unit/\\\",getValue(\\\"PrimaryUnitID\\\"))\"
             },
             {
                 \"name\": \"errorDefaultValue\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"isJSONOutput\",
-                \"value\": \"false\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"false\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"PrimaryUnitID\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"PrimaryUnitID\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"UnitURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"UnitURI\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SubmitPythonTransformationCommand\"
+        \"tags\": [\"Transformation\"]
     },
     {
-        \"tags\": [\"Transformation\"],
+        \"commandName\": \"SetWorksheetPropertiesCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"properties\",
+                \"type\": \"other\",
                 \"value\": {
-                    \"hasServiceProperties\": false,
-                    \"hasPrefix\": false,
                     \"graphLabel\": \"NPGDims\",
-                    \"hasBaseURI\": false
-                },
-                \"type\": \"other\"
+                    \"hasBaseURI\": false,
+                    \"hasPrefix\": false,
+                    \"hasServiceProperties\": false
+                }
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             }
         ],
-        \"commandName\": \"SetWorksheetPropertiesCommand\"
+        \"tags\": [\"Transformation\"]
     },
     {
-        \"tags\": [\"Transformation\"],
+        \"commandName\": \"SetWorksheetPropertiesCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"properties\",
+                \"type\": \"other\",
                 \"value\": {
-                    \"hasServiceProperties\": false,
-                    \"hasPrefix\": false,
                     \"graphLabel\": \"\",
+                    \"hasBaseURI\": false,
                     \"hasGithubURL\": true,
                     \"GithubURL\": \"https://github.com/american-art/npg/tree/master/NPGDimsParsed\",
-                    \"hasBaseURI\": false,
-                    \"baseURI\": \"\"
-                },
-                \"type\": \"other\"
+                    \"baseURI\": \"\",
+                    \"hasPrefix\": false,
+                    \"hasServiceProperties\": false
+                }
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             }
         ],
-        \"commandName\": \"SetWorksheetPropertiesCommand\"
+        \"tags\": [\"Transformation\"]
     },
     {
-        \"tags\": [\"SemanticType\"],
+        \"commandName\": \"SetMetaPropertyCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"ObjectURI\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"ObjectURI\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"metaPropertyName\",
-                \"value\": \"isUriOfClass\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
             },
             {
                 \"name\": \"metaPropertyUri\",
-                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object\"
             },
             {
                 \"name\": \"metaPropertyId\",
-                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\"
             },
             {
                 \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
                 \"value\": [{
-                    \"isProvenance\": false,
-                    \"isPrimary\": true,
-                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
-                    \"DomainLabel\": \"crm:E22_Man-Made_Object1 (add)\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object\",
                     \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\",
-                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object\"
-                }],
-                \"type\": \"other\"
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"crm:E22_Man-Made_Object1 (add)\"
+                }]
             },
             {
                 \"name\": \"trainAndShowUpdates\",
-                \"value\": true,
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": true
             },
             {
                 \"name\": \"rdfLiteralType\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"language\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SetMetaPropertyCommand\"
+        \"tags\": [\"SemanticType\"]
     },
     {
-        \"tags\": [\"SemanticType\"],
+        \"commandName\": \"SetMetaPropertyCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"DimensionTextURI\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"DimensionTextURI\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"metaPropertyName\",
-                \"value\": \"isUriOfClass\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
             },
             {
                 \"name\": \"metaPropertyUri\",
-                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object\"
             },
             {
                 \"name\": \"metaPropertyId\",
-                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1\"
             },
             {
                 \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
                 \"value\": [{
-                    \"isProvenance\": false,
-                    \"isPrimary\": true,
-                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
-                    \"DomainLabel\": \"crm:E33_Linguistic_Object1\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object\",
                     \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1\",
-                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object\"
-                }],
-                \"type\": \"other\"
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"crm:E33_Linguistic_Object1\"
+                }]
             },
             {
                 \"name\": \"trainAndShowUpdates\",
-                \"value\": true,
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": true
             },
             {
                 \"name\": \"rdfLiteralType\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"language\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionTextURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionTextURI\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionTextURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionTextURI\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SetMetaPropertyCommand\"
+        \"tags\": [\"SemanticType\"]
     },
     {
-        \"tags\": [\"SemanticType\"],
+        \"commandName\": \"SetSemanticTypeCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"DisplayDimensions\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"DisplayDimensions\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
                 \"value\": [{
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
                     \"FullType\": \"http://www.w3.org/1999/02/22-rdf-syntax-ns#value\",
-                    \"isPrimary\": true,
-                    \"isProvenance\": false,
-                    \"DomainLabel\": \"crm:E33_Linguistic_Object1\",
-                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1\",
-                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object\"
-                }],
-                \"type\": \"other\"
+                    \"DomainLabel\": \"crm:E33_Linguistic_Object1\"
+                }]
             },
             {
                 \"name\": \"trainAndShowUpdates\",
-                \"value\": true,
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": true
             },
             {
                 \"name\": \"rdfLiteralType\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"language\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DisplayDimensions\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DisplayDimensions\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DisplayDimensions\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DisplayDimensions\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SetSemanticTypeCommand\"
+        \"tags\": [\"SemanticType\"]
     },
     {
-        \"tags\": [\"SemanticType\"],
+        \"commandName\": \"SetMetaPropertyCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"PartURI\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"PartURI\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"metaPropertyName\",
-                \"value\": \"isUriOfClass\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
             },
             {
                 \"name\": \"metaPropertyUri\",
-                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing\"
             },
             {
                 \"name\": \"metaPropertyId\",
-                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing1\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing1\"
             },
             {
                 \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
                 \"value\": [{
-                    \"isProvenance\": false,
-                    \"isPrimary\": true,
-                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
-                    \"DomainLabel\": \"crm:E18_Physical_Thing1\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing\",
                     \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing1\",
-                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing\"
-                }],
-                \"type\": \"other\"
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"crm:E18_Physical_Thing1\"
+                }]
             },
             {
                 \"name\": \"trainAndShowUpdates\",
-                \"value\": true,
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": true
             },
             {
                 \"name\": \"rdfLiteralType\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"language\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"PartURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"PartURI\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"PartURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"PartURI\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SetMetaPropertyCommand\"
+        \"tags\": [\"SemanticType\"]
     },
     {
-        \"tags\": [\"SemanticType\"],
+        \"commandName\": \"SetSemanticTypeCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"Element\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Element\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
                 \"value\": [{
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
                     \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
-                    \"isPrimary\": true,
-                    \"isProvenance\": false,
-                    \"DomainLabel\": \"crm:E18_Physical_Thing1\",
-                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing1\",
-                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing\"
-                }],
-                \"type\": \"other\"
+                    \"DomainLabel\": \"crm:E18_Physical_Thing1\"
+                }]
             },
             {
                 \"name\": \"trainAndShowUpdates\",
-                \"value\": true,
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": true
             },
             {
                 \"name\": \"rdfLiteralType\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"language\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Element\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Element\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Element\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Element\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SetSemanticTypeCommand\"
+        \"tags\": [\"SemanticType\"]
     },
     {
-        \"tags\": [\"SemanticType\"],
+        \"commandName\": \"SetMetaPropertyCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"DimensionURI\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"DimensionURI\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"metaPropertyName\",
-                \"value\": \"isUriOfClass\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
             },
             {
                 \"name\": \"metaPropertyUri\",
-                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension\"
             },
             {
                 \"name\": \"metaPropertyId\",
-                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension1\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension1\"
             },
             {
                 \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
                 \"value\": [{
-                    \"isProvenance\": false,
-                    \"isPrimary\": true,
-                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
-                    \"DomainLabel\": \"crm:E54_Dimension1\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension\",
                     \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension1\",
-                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension\"
-                }],
-                \"type\": \"other\"
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"crm:E54_Dimension1\"
+                }]
             },
             {
                 \"name\": \"trainAndShowUpdates\",
-                \"value\": true,
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": true
             },
             {
                 \"name\": \"rdfLiteralType\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"language\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionURI\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionURI\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SetMetaPropertyCommand\"
+        \"tags\": [\"SemanticType\"]
     },
     {
-        \"tags\": [\"SemanticType\"],
+        \"commandName\": \"SetMetaPropertyCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"DimensionTypeURI\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"DimensionTypeURI\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"metaPropertyName\",
-                \"value\": \"isUriOfClass\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
             },
             {
                 \"name\": \"metaPropertyUri\",
-                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E55_Type\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E55_Type\"
             },
             {
                 \"name\": \"metaPropertyId\",
-                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E55_Type1\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E55_Type1\"
             },
             {
                 \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
                 \"value\": [{
-                    \"isProvenance\": false,
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E55_Type\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E55_Type1\",
                     \"isPrimary\": true,
+                    \"isProvenance\": false,
                     \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
-                    \"DomainLabel\": \"crm:E55_Type1\",
-                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E55_Type1\",
-                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E55_Type\"
-                }],
-                \"type\": \"other\"
+                    \"DomainLabel\": \"crm:E55_Type1\"
+                }]
             },
             {
                 \"name\": \"trainAndShowUpdates\",
-                \"value\": true,
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": true
             },
             {
                 \"name\": \"rdfLiteralType\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"language\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionTypeURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionTypeURI\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionTypeURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionTypeURI\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SetMetaPropertyCommand\"
+        \"tags\": [\"SemanticType\"]
     },
     {
-        \"tags\": [\"SemanticType\"],
+        \"commandName\": \"SetSemanticTypeCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"DimensionType\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"DimensionType\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
                 \"value\": [{
-                    \"FullType\": \"http://www.w3.org/2004/02/skos/core#prefLabel\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E55_Type\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E55_Type1\",
                     \"isPrimary\": true,
                     \"isProvenance\": false,
-                    \"DomainLabel\": \"crm:E55_Type1\",
-                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E55_Type1\",
-                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E55_Type\"
-                }],
-                \"type\": \"other\"
+                    \"FullType\": \"http://www.w3.org/2004/02/skos/core#prefLabel\",
+                    \"DomainLabel\": \"crm:E55_Type1\"
+                }]
             },
             {
                 \"name\": \"trainAndShowUpdates\",
-                \"value\": true,
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": true
             },
             {
                 \"name\": \"rdfLiteralType\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"language\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionType\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionType\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionType\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DimensionType\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SetSemanticTypeCommand\"
+        \"tags\": [\"SemanticType\"]
     },
     {
-        \"tags\": [\"SemanticType\"],
+        \"commandName\": \"SetSemanticTypeCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"Dimension_clean\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Dimension_clean\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
                 \"value\": [{
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
                     \"FullType\": \"http://www.w3.org/1999/02/22-rdf-syntax-ns#value\",
-                    \"isPrimary\": true,
-                    \"isProvenance\": false,
-                    \"DomainLabel\": \"crm:E54_Dimension1\",
-                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension1\",
-                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension\"
-                }],
-                \"type\": \"other\"
+                    \"DomainLabel\": \"crm:E54_Dimension1\"
+                }]
             },
             {
                 \"name\": \"trainAndShowUpdates\",
-                \"value\": true,
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": true
             },
             {
                 \"name\": \"rdfLiteralType\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"language\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Dimension_clean\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Dimension_clean\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Dimension_clean\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Dimension_clean\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SetSemanticTypeCommand\"
+        \"tags\": [\"SemanticType\"]
     },
     {
-        \"tags\": [\"SemanticType\"],
+        \"commandName\": \"SetMetaPropertyCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"UnitURI\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"UnitURI\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"metaPropertyName\",
-                \"value\": \"isUriOfClass\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
             },
             {
                 \"name\": \"metaPropertyUri\",
-                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit\"
             },
             {
                 \"name\": \"metaPropertyId\",
-                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit1\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit1\"
             },
             {
                 \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
                 \"value\": [{
-                    \"isProvenance\": false,
-                    \"isPrimary\": true,
-                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
-                    \"DomainLabel\": \"crm:E58_Measurement_Unit1\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit\",
                     \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit1\",
-                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit\"
-                }],
-                \"type\": \"other\"
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"crm:E58_Measurement_Unit1\"
+                }]
             },
             {
                 \"name\": \"trainAndShowUpdates\",
-                \"value\": true,
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": true
             },
             {
                 \"name\": \"rdfLiteralType\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"language\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"UnitURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"UnitURI\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"UnitURI\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"UnitURI\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SetMetaPropertyCommand\"
+        \"tags\": [\"SemanticType\"]
     },
     {
-        \"tags\": [\"SemanticType\"],
+        \"commandName\": \"SetSemanticTypeCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"PrimaryUnitID\"}],
-                \"type\": \"hNodeId\"
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"PrimaryUnitID\"}]
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
             },
             {
                 \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
                 \"value\": [{
-                    \"FullType\": \"http://www.w3.org/2004/02/skos/core#prefLabel\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit1\",
                     \"isPrimary\": true,
                     \"isProvenance\": false,
-                    \"DomainLabel\": \"crm:E58_Measurement_Unit1\",
-                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit1\",
-                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit\"
-                }],
-                \"type\": \"other\"
+                    \"FullType\": \"http://www.w3.org/2004/02/skos/core#prefLabel\",
+                    \"DomainLabel\": \"crm:E58_Measurement_Unit1\"
+                }]
             },
             {
                 \"name\": \"trainAndShowUpdates\",
-                \"value\": true,
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": true
             },
             {
                 \"name\": \"rdfLiteralType\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"language\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"PrimaryUnitID\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"PrimaryUnitID\\\"}]}]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"PrimaryUnitID\\\"}]}]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"PrimaryUnitID\\\"}]}]\"
             }
         ],
-        \"commandName\": \"SetSemanticTypeCommand\"
+        \"tags\": [\"SemanticType\"]
     },
     {
-        \"tags\": [\"Modeling\"],
+        \"commandName\": \"AddLinkCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"edge\",
+                \"type\": \"other\",
                 \"value\": {
-                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object\",
                     \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by\",
                     \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object\",
                     \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\",
                     \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object\"
-                },
-                \"type\": \"other\"
+                }
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             }
         ],
-        \"commandName\": \"AddLinkCommand\"
+        \"tags\": [\"Modeling\"]
     },
     {
-        \"tags\": [\"Modeling\"],
+        \"commandName\": \"AddLinkCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"edge\",
+                \"type\": \"other\",
                 \"value\": {
-                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing\",
                     \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of\",
                     \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing1\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing\",
                     \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\",
                     \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object\"
-                },
-                \"type\": \"other\"
+                }
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             }
         ],
-        \"commandName\": \"AddLinkCommand\"
+        \"tags\": [\"Modeling\"]
     },
     {
-        \"tags\": [\"Modeling\"],
+        \"commandName\": \"AddLinkCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"edge\",
+                \"type\": \"other\",
                 \"value\": {
-                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension\",
                     \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension\",
                     \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension1\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension\",
                     \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing1\",
                     \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing\"
-                },
-                \"type\": \"other\"
+                }
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             }
         ],
-        \"commandName\": \"AddLinkCommand\"
+        \"tags\": [\"Modeling\"]
     },
     {
-        \"tags\": [\"Modeling\"],
+        \"commandName\": \"AddLinkCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"edge\",
+                \"type\": \"other\",
                 \"value\": {
-                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E55_Type\",
                     \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P2_has_type\",
                     \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E55_Type1\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E55_Type\",
                     \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension1\",
                     \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension\"
-                },
-                \"type\": \"other\"
+                }
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             }
         ],
-        \"commandName\": \"AddLinkCommand\"
+        \"tags\": [\"Modeling\"]
     },
     {
-        \"tags\": [\"Modeling\"],
+        \"commandName\": \"DeleteLinkCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"edge\",
+                \"type\": \"other\",
                 \"value\": {
                     \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P2_has_type\",
                     \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E55_Type1\",
                     \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\"
-                },
-                \"type\": \"other\"
+                }
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             }
         ],
-        \"commandName\": \"DeleteLinkCommand\"
+        \"tags\": [\"Modeling\"]
     },
     {
-        \"tags\": [\"Modeling\"],
+        \"commandName\": \"AddLinkCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"edge\",
+                \"type\": \"other\",
                 \"value\": {
-                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit\",
                     \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P91_has_unit\",
                     \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit1\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit\",
                     \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension1\",
                     \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E54_Dimension\"
-                },
-                \"type\": \"other\"
+                }
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             }
         ],
-        \"commandName\": \"AddLinkCommand\"
+        \"tags\": [\"Modeling\"]
     },
     {
-        \"tags\": [\"Modeling\"],
+        \"commandName\": \"AddLiteralNodeCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"literalValue\",
-                \"value\": \"http://vocab.getty.edu/aat/300266036\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"http://vocab.getty.edu/aat/300266036\"
             },
             {
                 \"name\": \"literalType\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"language\",
-                \"value\": \"\",
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": \"\"
             },
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"isUri\",
-                \"value\": true,
-                \"type\": \"other\"
+                \"type\": \"other\",
+                \"value\": true
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             }
         ],
-        \"commandName\": \"AddLiteralNodeCommand\"
+        \"tags\": [\"Modeling\"]
     },
     {
-        \"tags\": [\"Modeling\"],
+        \"commandName\": \"AddLinkCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
             {
                 \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
             },
             {
                 \"name\": \"edge\",
+                \"type\": \"other\",
                 \"value\": {
-                    \"edgeTargetUri\": \"http://vocab.getty.edu/aat/300266036\",
-                    \"isProvenance\": false,
                     \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P2_has_type\",
                     \"edgeTargetId\": \"http://vocab.getty.edu/aat/3002660361\",
+                    \"edgeTargetUri\": \"http://vocab.getty.edu/aat/300266036\",
+                    \"isProvenance\": false,
                     \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1\",
                     \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object\"
-                },
-                \"type\": \"other\"
+                }
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             },
             {
                 \"name\": \"outputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
             }
         ],
-        \"commandName\": \"AddLinkCommand\"
+        \"tags\": [\"Modeling\"]
     }
 ]""" .
 
-km-dev:TriplesMap_a507866d-4497-444b-906b-bd11477a4374 a rr:TriplesMap .
+km-dev:TriplesMap_8724117b-194a-46bd-a380-8973f2175b35 a rr:TriplesMap .
 
-_:node1brvt2odbx1 km-dev:hasTriplesMap km-dev:TriplesMap_a507866d-4497-444b-906b-bd11477a4374 .
+_:node1ca3jc69sx1 km-dev:hasTriplesMap km-dev:TriplesMap_8724117b-194a-46bd-a380-8973f2175b35 .
 
-km-dev:TriplesMap_a507866d-4497-444b-906b-bd11477a4374 km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:TriplesMap_8724117b-194a-46bd-a380-8973f2175b35 km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx2 rr:tableName "NPGObjDimsParsed3.csv" ;
+_:node1ca3jc69sx2 rr:tableName "NPGObjDimsParsed3.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasLogicalTable _:node1brvt2odbx2 .
+_:node1ca3jc69sx1 km-dev:hasLogicalTable _:node1ca3jc69sx2 .
 
-km-dev:TriplesMap_a507866d-4497-444b-906b-bd11477a4374 rr:logicalTable _:node1brvt2odbx2 ;
-	rr:subjectMap _:node1brvt2odbx3 .
+km-dev:TriplesMap_8724117b-194a-46bd-a380-8973f2175b35 rr:logicalTable _:node1ca3jc69sx2 ;
+	rr:subjectMap _:node1ca3jc69sx3 .
 
-_:node1brvt2odbx1 km-dev:hasSubjectMap _:node1brvt2odbx3 .
+_:node1ca3jc69sx1 km-dev:hasSubjectMap _:node1ca3jc69sx3 .
 
-_:node1brvt2odbx3 km-dev:isPartOfMapping _:node1brvt2odbx1 ;
+_:node1ca3jc69sx3 km-dev:isPartOfMapping _:node1ca3jc69sx1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing1" ;
 	rr:class crm:E18_Physical_Thing ;
 	rr:template "{PartURI}" .
 
-km-dev:PredicateObjectMap_12188d19-c3f8-4c60-a3bc-fc99f6d7e4a5 rr:predicate crm:P43_has_dimension .
+km-dev:PredicateObjectMap_a320c26e-8368-43ab-af2f-01716fe83059 rr:predicate crm:P43_has_dimension .
 
-km-dev:RefObjectMap_4a629b5f-8241-499a-a21d-9baa2be7258b a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_18438092-92a3-4776-ad2c-da4ce517e2d7 ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:RefObjectMap_d9cae657-6007-43b9-a68d-b0c81d0e30b9 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_6c387457-11b1-421f-b834-189d2bcfa9ea ;
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasObjectMap km-dev:RefObjectMap_4a629b5f-8241-499a-a21d-9baa2be7258b .
+_:node1ca3jc69sx1 km-dev:hasObjectMap km-dev:RefObjectMap_d9cae657-6007-43b9-a68d-b0c81d0e30b9 .
 
-km-dev:PredicateObjectMap_12188d19-c3f8-4c60-a3bc-fc99f6d7e4a5 rr:objectMap km-dev:RefObjectMap_4a629b5f-8241-499a-a21d-9baa2be7258b .
+km-dev:PredicateObjectMap_a320c26e-8368-43ab-af2f-01716fe83059 rr:objectMap km-dev:RefObjectMap_d9cae657-6007-43b9-a68d-b0c81d0e30b9 .
 
-km-dev:TriplesMap_a507866d-4497-444b-906b-bd11477a4374 rr:predicateObjectMap km-dev:PredicateObjectMap_12188d19-c3f8-4c60-a3bc-fc99f6d7e4a5 .
+km-dev:TriplesMap_8724117b-194a-46bd-a380-8973f2175b35 rr:predicateObjectMap km-dev:PredicateObjectMap_a320c26e-8368-43ab-af2f-01716fe83059 .
 
-km-dev:PredicateObjectMap_12188d19-c3f8-4c60-a3bc-fc99f6d7e4a5 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:PredicateObjectMap_a320c26e-8368-43ab-af2f-01716fe83059 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_12188d19-c3f8-4c60-a3bc-fc99f6d7e4a5 .
+_:node1ca3jc69sx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_a320c26e-8368-43ab-af2f-01716fe83059 .
 
-km-dev:PredicateObjectMap_b0ef6830-6c5f-42b2-a950-e37879191fb7 rr:predicate rdfs:label .
+km-dev:PredicateObjectMap_5dc22944-d885-4460-8878-02b7ef10b3d4 rr:predicate rdfs:label .
 
-_:node1brvt2odbx4 rr:column "Element" ;
+_:node1ca3jc69sx4 rr:column "Element" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasObjectMap _:node1brvt2odbx4 .
+_:node1ca3jc69sx1 km-dev:hasObjectMap _:node1ca3jc69sx4 .
 
-km-dev:PredicateObjectMap_b0ef6830-6c5f-42b2-a950-e37879191fb7 rr:objectMap _:node1brvt2odbx4 .
+km-dev:PredicateObjectMap_5dc22944-d885-4460-8878-02b7ef10b3d4 rr:objectMap _:node1ca3jc69sx4 .
 
-km-dev:TriplesMap_a507866d-4497-444b-906b-bd11477a4374 rr:predicateObjectMap km-dev:PredicateObjectMap_b0ef6830-6c5f-42b2-a950-e37879191fb7 .
+km-dev:TriplesMap_8724117b-194a-46bd-a380-8973f2175b35 rr:predicateObjectMap km-dev:PredicateObjectMap_5dc22944-d885-4460-8878-02b7ef10b3d4 .
 
-km-dev:PredicateObjectMap_b0ef6830-6c5f-42b2-a950-e37879191fb7 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:PredicateObjectMap_5dc22944-d885-4460-8878-02b7ef10b3d4 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b0ef6830-6c5f-42b2-a950-e37879191fb7 .
+_:node1ca3jc69sx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_5dc22944-d885-4460-8878-02b7ef10b3d4 .
 
-km-dev:TriplesMap_18438092-92a3-4776-ad2c-da4ce517e2d7 a rr:TriplesMap .
+km-dev:TriplesMap_6c387457-11b1-421f-b834-189d2bcfa9ea a rr:TriplesMap .
 
-_:node1brvt2odbx1 km-dev:hasTriplesMap km-dev:TriplesMap_18438092-92a3-4776-ad2c-da4ce517e2d7 .
+_:node1ca3jc69sx1 km-dev:hasTriplesMap km-dev:TriplesMap_6c387457-11b1-421f-b834-189d2bcfa9ea .
 
-km-dev:TriplesMap_18438092-92a3-4776-ad2c-da4ce517e2d7 km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:TriplesMap_6c387457-11b1-421f-b834-189d2bcfa9ea km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx5 rr:tableName "NPGObjDimsParsed3.csv" ;
+_:node1ca3jc69sx5 rr:tableName "NPGObjDimsParsed3.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasLogicalTable _:node1brvt2odbx5 .
+_:node1ca3jc69sx1 km-dev:hasLogicalTable _:node1ca3jc69sx5 .
 
-km-dev:TriplesMap_18438092-92a3-4776-ad2c-da4ce517e2d7 rr:logicalTable _:node1brvt2odbx5 ;
-	rr:subjectMap _:node1brvt2odbx6 .
+km-dev:TriplesMap_6c387457-11b1-421f-b834-189d2bcfa9ea rr:logicalTable _:node1ca3jc69sx5 ;
+	rr:subjectMap _:node1ca3jc69sx6 .
 
-_:node1brvt2odbx1 km-dev:hasSubjectMap _:node1brvt2odbx6 .
+_:node1ca3jc69sx1 km-dev:hasSubjectMap _:node1ca3jc69sx6 .
 
-_:node1brvt2odbx6 km-dev:isPartOfMapping _:node1brvt2odbx1 ;
+_:node1ca3jc69sx6 km-dev:isPartOfMapping _:node1ca3jc69sx1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E54_Dimension1" ;
 	rr:class crm:E54_Dimension ;
-	rr:template "{PartURI}/dimension/{DimensionID}" .
+	rr:template "{DimensionURI}" .
 
-km-dev:PredicateObjectMap_c279fbef-0373-43c3-ba46-eba1a66ab050 rr:predicate crm:P2_has_type .
+km-dev:PredicateObjectMap_53984a1d-7039-4939-85c9-c68863c7f771 rr:predicate crm:P2_has_type .
 
-km-dev:RefObjectMap_3e317ef6-43a4-4d9b-a06e-ae52eed3e1c7 a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_79f05c86-da47-4c99-955d-1f43263ada5e ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:RefObjectMap_a6c52e7a-582e-4a2d-b272-ff716ae305c2 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_fa734e62-ea3c-4f84-9409-dd4bb46049ee ;
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasObjectMap km-dev:RefObjectMap_3e317ef6-43a4-4d9b-a06e-ae52eed3e1c7 .
+_:node1ca3jc69sx1 km-dev:hasObjectMap km-dev:RefObjectMap_a6c52e7a-582e-4a2d-b272-ff716ae305c2 .
 
-km-dev:PredicateObjectMap_c279fbef-0373-43c3-ba46-eba1a66ab050 rr:objectMap km-dev:RefObjectMap_3e317ef6-43a4-4d9b-a06e-ae52eed3e1c7 .
+km-dev:PredicateObjectMap_53984a1d-7039-4939-85c9-c68863c7f771 rr:objectMap km-dev:RefObjectMap_a6c52e7a-582e-4a2d-b272-ff716ae305c2 .
 
-km-dev:TriplesMap_18438092-92a3-4776-ad2c-da4ce517e2d7 rr:predicateObjectMap km-dev:PredicateObjectMap_c279fbef-0373-43c3-ba46-eba1a66ab050 .
+km-dev:TriplesMap_6c387457-11b1-421f-b834-189d2bcfa9ea rr:predicateObjectMap km-dev:PredicateObjectMap_53984a1d-7039-4939-85c9-c68863c7f771 .
 
-km-dev:PredicateObjectMap_c279fbef-0373-43c3-ba46-eba1a66ab050 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:PredicateObjectMap_53984a1d-7039-4939-85c9-c68863c7f771 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c279fbef-0373-43c3-ba46-eba1a66ab050 .
+_:node1ca3jc69sx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_53984a1d-7039-4939-85c9-c68863c7f771 .
 
-km-dev:PredicateObjectMap_edde0006-288f-4481-8884-043a4962e4ed rr:predicate crm:P91_has_unit .
+km-dev:PredicateObjectMap_95753de6-478d-4b89-ac7e-9d307fc6348e rr:predicate crm:P91_has_unit .
 
-km-dev:RefObjectMap_1ca27dca-e9f1-4430-bf42-c17e5280cd8b a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_d2ea615f-690d-4647-b062-8017f69526fb ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:RefObjectMap_d329d926-4570-4ff7-a4e9-06877556daec a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_aa812cc9-5510-4594-b68b-5e91047b4cee ;
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasObjectMap km-dev:RefObjectMap_1ca27dca-e9f1-4430-bf42-c17e5280cd8b .
+_:node1ca3jc69sx1 km-dev:hasObjectMap km-dev:RefObjectMap_d329d926-4570-4ff7-a4e9-06877556daec .
 
-km-dev:PredicateObjectMap_edde0006-288f-4481-8884-043a4962e4ed rr:objectMap km-dev:RefObjectMap_1ca27dca-e9f1-4430-bf42-c17e5280cd8b .
+km-dev:PredicateObjectMap_95753de6-478d-4b89-ac7e-9d307fc6348e rr:objectMap km-dev:RefObjectMap_d329d926-4570-4ff7-a4e9-06877556daec .
 
-km-dev:TriplesMap_18438092-92a3-4776-ad2c-da4ce517e2d7 rr:predicateObjectMap km-dev:PredicateObjectMap_edde0006-288f-4481-8884-043a4962e4ed .
+km-dev:TriplesMap_6c387457-11b1-421f-b834-189d2bcfa9ea rr:predicateObjectMap km-dev:PredicateObjectMap_95753de6-478d-4b89-ac7e-9d307fc6348e .
 
-km-dev:PredicateObjectMap_edde0006-288f-4481-8884-043a4962e4ed a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:PredicateObjectMap_95753de6-478d-4b89-ac7e-9d307fc6348e a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_edde0006-288f-4481-8884-043a4962e4ed .
+_:node1ca3jc69sx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_95753de6-478d-4b89-ac7e-9d307fc6348e .
 
-km-dev:PredicateObjectMap_e5b99226-564e-441a-b8cc-28b7b8845a0d rr:predicate rdf:value .
+km-dev:PredicateObjectMap_4cbe6254-6c87-4d72-a3c6-9625a361897d rr:predicate rdf:value .
 
-_:node1brvt2odbx7 rr:column "Dimension_clean" ;
+_:node1ca3jc69sx7 rr:column "Dimension_clean" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasObjectMap _:node1brvt2odbx7 .
+_:node1ca3jc69sx1 km-dev:hasObjectMap _:node1ca3jc69sx7 .
 
-km-dev:PredicateObjectMap_e5b99226-564e-441a-b8cc-28b7b8845a0d rr:objectMap _:node1brvt2odbx7 .
+km-dev:PredicateObjectMap_4cbe6254-6c87-4d72-a3c6-9625a361897d rr:objectMap _:node1ca3jc69sx7 .
 
-km-dev:TriplesMap_18438092-92a3-4776-ad2c-da4ce517e2d7 rr:predicateObjectMap km-dev:PredicateObjectMap_e5b99226-564e-441a-b8cc-28b7b8845a0d .
+km-dev:TriplesMap_6c387457-11b1-421f-b834-189d2bcfa9ea rr:predicateObjectMap km-dev:PredicateObjectMap_4cbe6254-6c87-4d72-a3c6-9625a361897d .
 
-km-dev:PredicateObjectMap_e5b99226-564e-441a-b8cc-28b7b8845a0d a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:PredicateObjectMap_4cbe6254-6c87-4d72-a3c6-9625a361897d a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_e5b99226-564e-441a-b8cc-28b7b8845a0d .
+_:node1ca3jc69sx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_4cbe6254-6c87-4d72-a3c6-9625a361897d .
 
-km-dev:TriplesMap_5fd666b2-f2e1-4aaa-8ec9-e750dc345278 a rr:TriplesMap .
+km-dev:TriplesMap_55bb1331-e95c-4058-a08f-4427cf2bc027 a rr:TriplesMap .
 
-_:node1brvt2odbx1 km-dev:hasTriplesMap km-dev:TriplesMap_5fd666b2-f2e1-4aaa-8ec9-e750dc345278 .
+_:node1ca3jc69sx1 km-dev:hasTriplesMap km-dev:TriplesMap_55bb1331-e95c-4058-a08f-4427cf2bc027 .
 
-km-dev:TriplesMap_5fd666b2-f2e1-4aaa-8ec9-e750dc345278 km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:TriplesMap_55bb1331-e95c-4058-a08f-4427cf2bc027 km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx8 rr:tableName "NPGObjDimsParsed3.csv" ;
+_:node1ca3jc69sx8 rr:tableName "NPGObjDimsParsed3.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasLogicalTable _:node1brvt2odbx8 .
+_:node1ca3jc69sx1 km-dev:hasLogicalTable _:node1ca3jc69sx8 .
 
-km-dev:TriplesMap_5fd666b2-f2e1-4aaa-8ec9-e750dc345278 rr:logicalTable _:node1brvt2odbx8 ;
-	rr:subjectMap _:node1brvt2odbx9 .
+km-dev:TriplesMap_55bb1331-e95c-4058-a08f-4427cf2bc027 rr:logicalTable _:node1ca3jc69sx8 ;
+	rr:subjectMap _:node1ca3jc69sx9 .
 
-_:node1brvt2odbx1 km-dev:hasSubjectMap _:node1brvt2odbx9 .
+_:node1ca3jc69sx1 km-dev:hasSubjectMap _:node1ca3jc69sx9 .
 
-_:node1brvt2odbx9 km-dev:isPartOfMapping _:node1brvt2odbx1 ;
+_:node1ca3jc69sx9 km-dev:isPartOfMapping _:node1ca3jc69sx1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1" ;
 	rr:class crm:E22_Man-Made_Object ;
 	rr:template "object/{ObjectID}" ;
 	a km-dev:steinerTreeRootNode .
 
-km-dev:PredicateObjectMap_23ac8dcf-e70e-414b-b4b0-4a5da0b11a06 rr:predicate crm:P46_is_composed_of .
+km-dev:PredicateObjectMap_4e5c6ec6-bda6-4845-948c-f81a3d4b34d2 rr:predicate crm:P46_is_composed_of .
 
-km-dev:RefObjectMap_7cc76c18-fdbd-451a-af27-d4eac2e5c7af a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_a507866d-4497-444b-906b-bd11477a4374 ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:RefObjectMap_d91c335d-6dfd-47f3-9e61-fb77cb6191f9 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_8724117b-194a-46bd-a380-8973f2175b35 ;
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasObjectMap km-dev:RefObjectMap_7cc76c18-fdbd-451a-af27-d4eac2e5c7af .
+_:node1ca3jc69sx1 km-dev:hasObjectMap km-dev:RefObjectMap_d91c335d-6dfd-47f3-9e61-fb77cb6191f9 .
 
-km-dev:PredicateObjectMap_23ac8dcf-e70e-414b-b4b0-4a5da0b11a06 rr:objectMap km-dev:RefObjectMap_7cc76c18-fdbd-451a-af27-d4eac2e5c7af .
+km-dev:PredicateObjectMap_4e5c6ec6-bda6-4845-948c-f81a3d4b34d2 rr:objectMap km-dev:RefObjectMap_d91c335d-6dfd-47f3-9e61-fb77cb6191f9 .
 
-km-dev:TriplesMap_5fd666b2-f2e1-4aaa-8ec9-e750dc345278 rr:predicateObjectMap km-dev:PredicateObjectMap_23ac8dcf-e70e-414b-b4b0-4a5da0b11a06 .
+km-dev:TriplesMap_55bb1331-e95c-4058-a08f-4427cf2bc027 rr:predicateObjectMap km-dev:PredicateObjectMap_4e5c6ec6-bda6-4845-948c-f81a3d4b34d2 .
 
-km-dev:PredicateObjectMap_23ac8dcf-e70e-414b-b4b0-4a5da0b11a06 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:PredicateObjectMap_4e5c6ec6-bda6-4845-948c-f81a3d4b34d2 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_23ac8dcf-e70e-414b-b4b0-4a5da0b11a06 .
+_:node1ca3jc69sx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_4e5c6ec6-bda6-4845-948c-f81a3d4b34d2 .
 
-km-dev:PredicateObjectMap_04894921-5a5c-43c5-b25c-70d4efc0ef8c rr:predicate crm:P67i_is_referred_to_by .
+km-dev:PredicateObjectMap_b286a3cf-b933-4231-8f91-e44f4571186f rr:predicate crm:P67i_is_referred_to_by .
 
-km-dev:RefObjectMap_52a94cfb-8b83-457b-ae26-1e7a228b7f80 a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_72619c07-018f-4069-b811-1e85515075a8 ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:RefObjectMap_93815074-46f4-444a-94d5-ae89a171eb49 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_185bc5a1-7a9b-427f-8049-170f8b0a9da9 ;
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasObjectMap km-dev:RefObjectMap_52a94cfb-8b83-457b-ae26-1e7a228b7f80 .
+_:node1ca3jc69sx1 km-dev:hasObjectMap km-dev:RefObjectMap_93815074-46f4-444a-94d5-ae89a171eb49 .
 
-km-dev:PredicateObjectMap_04894921-5a5c-43c5-b25c-70d4efc0ef8c rr:objectMap km-dev:RefObjectMap_52a94cfb-8b83-457b-ae26-1e7a228b7f80 .
+km-dev:PredicateObjectMap_b286a3cf-b933-4231-8f91-e44f4571186f rr:objectMap km-dev:RefObjectMap_93815074-46f4-444a-94d5-ae89a171eb49 .
 
-km-dev:TriplesMap_5fd666b2-f2e1-4aaa-8ec9-e750dc345278 rr:predicateObjectMap km-dev:PredicateObjectMap_04894921-5a5c-43c5-b25c-70d4efc0ef8c .
+km-dev:TriplesMap_55bb1331-e95c-4058-a08f-4427cf2bc027 rr:predicateObjectMap km-dev:PredicateObjectMap_b286a3cf-b933-4231-8f91-e44f4571186f .
 
-km-dev:PredicateObjectMap_04894921-5a5c-43c5-b25c-70d4efc0ef8c a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:PredicateObjectMap_b286a3cf-b933-4231-8f91-e44f4571186f a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_04894921-5a5c-43c5-b25c-70d4efc0ef8c .
+_:node1ca3jc69sx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b286a3cf-b933-4231-8f91-e44f4571186f .
 
-km-dev:TriplesMap_72619c07-018f-4069-b811-1e85515075a8 a rr:TriplesMap .
+km-dev:TriplesMap_185bc5a1-7a9b-427f-8049-170f8b0a9da9 a rr:TriplesMap .
 
-_:node1brvt2odbx1 km-dev:hasTriplesMap km-dev:TriplesMap_72619c07-018f-4069-b811-1e85515075a8 .
+_:node1ca3jc69sx1 km-dev:hasTriplesMap km-dev:TriplesMap_185bc5a1-7a9b-427f-8049-170f8b0a9da9 .
 
-km-dev:TriplesMap_72619c07-018f-4069-b811-1e85515075a8 km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:TriplesMap_185bc5a1-7a9b-427f-8049-170f8b0a9da9 km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx10 rr:tableName "NPGObjDimsParsed3.csv" ;
+_:node1ca3jc69sx10 rr:tableName "NPGObjDimsParsed3.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasLogicalTable _:node1brvt2odbx10 .
+_:node1ca3jc69sx1 km-dev:hasLogicalTable _:node1ca3jc69sx10 .
 
-km-dev:TriplesMap_72619c07-018f-4069-b811-1e85515075a8 rr:logicalTable _:node1brvt2odbx10 ;
-	rr:subjectMap _:node1brvt2odbx11 .
+km-dev:TriplesMap_185bc5a1-7a9b-427f-8049-170f8b0a9da9 rr:logicalTable _:node1ca3jc69sx10 ;
+	rr:subjectMap _:node1ca3jc69sx11 .
 
-_:node1brvt2odbx1 km-dev:hasSubjectMap _:node1brvt2odbx11 .
+_:node1ca3jc69sx1 km-dev:hasSubjectMap _:node1ca3jc69sx11 .
 
-_:node1brvt2odbx11 km-dev:isPartOfMapping _:node1brvt2odbx1 ;
+_:node1ca3jc69sx11 km-dev:isPartOfMapping _:node1ca3jc69sx1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1" ;
 	rr:class crm:E33_Linguistic_Object ;
 	rr:template "{ObjectURI}/dimension_text" .
 
-km-dev:PredicateObjectMap_a924a28a-5007-407e-9761-23e416dbc13e rr:predicate rdf:value .
+km-dev:PredicateObjectMap_c2975919-7d35-4fea-bc0e-5f1e20896de0 rr:predicate rdf:value .
 
-_:node1brvt2odbx12 rr:column "DisplayDimensions" ;
+_:node1ca3jc69sx12 rr:column "DisplayDimensions" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasObjectMap _:node1brvt2odbx12 .
+_:node1ca3jc69sx1 km-dev:hasObjectMap _:node1ca3jc69sx12 .
 
-km-dev:PredicateObjectMap_a924a28a-5007-407e-9761-23e416dbc13e rr:objectMap _:node1brvt2odbx12 .
+km-dev:PredicateObjectMap_c2975919-7d35-4fea-bc0e-5f1e20896de0 rr:objectMap _:node1ca3jc69sx12 .
 
-km-dev:TriplesMap_72619c07-018f-4069-b811-1e85515075a8 rr:predicateObjectMap km-dev:PredicateObjectMap_a924a28a-5007-407e-9761-23e416dbc13e .
+km-dev:TriplesMap_185bc5a1-7a9b-427f-8049-170f8b0a9da9 rr:predicateObjectMap km-dev:PredicateObjectMap_c2975919-7d35-4fea-bc0e-5f1e20896de0 .
 
-km-dev:PredicateObjectMap_a924a28a-5007-407e-9761-23e416dbc13e a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:PredicateObjectMap_c2975919-7d35-4fea-bc0e-5f1e20896de0 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_a924a28a-5007-407e-9761-23e416dbc13e .
+_:node1ca3jc69sx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c2975919-7d35-4fea-bc0e-5f1e20896de0 .
 
-km-dev:PredicateObjectMap_4ce726b6-ccf7-48e9-88ae-4dd080777db6 rr:predicate crm:P2_has_type .
+km-dev:PredicateObjectMap_c14a2ad7-3a5c-432f-8ded-f8262fe3d4b6 rr:predicate crm:P2_has_type .
 
-_:node1brvt2odbx13 rr:constant <http://vocab.getty.edu/aat/300266036> ;
+_:node1ca3jc69sx13 rr:constant <http://vocab.getty.edu/aat/300266036> ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasObjectMap _:node1brvt2odbx13 .
+_:node1ca3jc69sx1 km-dev:hasObjectMap _:node1ca3jc69sx13 .
 
-km-dev:PredicateObjectMap_4ce726b6-ccf7-48e9-88ae-4dd080777db6 rr:objectMap _:node1brvt2odbx13 .
+km-dev:PredicateObjectMap_c14a2ad7-3a5c-432f-8ded-f8262fe3d4b6 rr:objectMap _:node1ca3jc69sx13 .
 
-km-dev:TriplesMap_72619c07-018f-4069-b811-1e85515075a8 rr:predicateObjectMap km-dev:PredicateObjectMap_4ce726b6-ccf7-48e9-88ae-4dd080777db6 .
+km-dev:TriplesMap_185bc5a1-7a9b-427f-8049-170f8b0a9da9 rr:predicateObjectMap km-dev:PredicateObjectMap_c14a2ad7-3a5c-432f-8ded-f8262fe3d4b6 .
 
-km-dev:PredicateObjectMap_4ce726b6-ccf7-48e9-88ae-4dd080777db6 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:PredicateObjectMap_c14a2ad7-3a5c-432f-8ded-f8262fe3d4b6 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_4ce726b6-ccf7-48e9-88ae-4dd080777db6 .
+_:node1ca3jc69sx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c14a2ad7-3a5c-432f-8ded-f8262fe3d4b6 .
 
-km-dev:TriplesMap_79f05c86-da47-4c99-955d-1f43263ada5e a rr:TriplesMap .
+km-dev:TriplesMap_fa734e62-ea3c-4f84-9409-dd4bb46049ee a rr:TriplesMap .
 
-_:node1brvt2odbx1 km-dev:hasTriplesMap km-dev:TriplesMap_79f05c86-da47-4c99-955d-1f43263ada5e .
+_:node1ca3jc69sx1 km-dev:hasTriplesMap km-dev:TriplesMap_fa734e62-ea3c-4f84-9409-dd4bb46049ee .
 
-km-dev:TriplesMap_79f05c86-da47-4c99-955d-1f43263ada5e km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:TriplesMap_fa734e62-ea3c-4f84-9409-dd4bb46049ee km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx14 rr:tableName "NPGObjDimsParsed3.csv" ;
+_:node1ca3jc69sx14 rr:tableName "NPGObjDimsParsed3.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasLogicalTable _:node1brvt2odbx14 .
+_:node1ca3jc69sx1 km-dev:hasLogicalTable _:node1ca3jc69sx14 .
 
-km-dev:TriplesMap_79f05c86-da47-4c99-955d-1f43263ada5e rr:logicalTable _:node1brvt2odbx14 ;
-	rr:subjectMap _:node1brvt2odbx15 .
+km-dev:TriplesMap_fa734e62-ea3c-4f84-9409-dd4bb46049ee rr:logicalTable _:node1ca3jc69sx14 ;
+	rr:subjectMap _:node1ca3jc69sx15 .
 
-_:node1brvt2odbx1 km-dev:hasSubjectMap _:node1brvt2odbx15 .
+_:node1ca3jc69sx1 km-dev:hasSubjectMap _:node1ca3jc69sx15 .
 
-_:node1brvt2odbx15 km-dev:isPartOfMapping _:node1brvt2odbx1 ;
+_:node1ca3jc69sx15 km-dev:isPartOfMapping _:node1ca3jc69sx1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E55_Type1" ;
 	rr:class crm:E55_Type ;
 	rr:template "{DimensionTypeURI}" .
 
-km-dev:PredicateObjectMap_61814aa3-70e2-4dd7-91a4-2b213a437898 rr:predicate skos:prefLabel .
+km-dev:PredicateObjectMap_11a31e92-1236-44cb-aec3-504d5a8165c2 rr:predicate skos:prefLabel .
 
-_:node1brvt2odbx16 rr:column "DimensionType" ;
+_:node1ca3jc69sx16 rr:column "DimensionType" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasObjectMap _:node1brvt2odbx16 .
+_:node1ca3jc69sx1 km-dev:hasObjectMap _:node1ca3jc69sx16 .
 
-km-dev:PredicateObjectMap_61814aa3-70e2-4dd7-91a4-2b213a437898 rr:objectMap _:node1brvt2odbx16 .
+km-dev:PredicateObjectMap_11a31e92-1236-44cb-aec3-504d5a8165c2 rr:objectMap _:node1ca3jc69sx16 .
 
-km-dev:TriplesMap_79f05c86-da47-4c99-955d-1f43263ada5e rr:predicateObjectMap km-dev:PredicateObjectMap_61814aa3-70e2-4dd7-91a4-2b213a437898 .
+km-dev:TriplesMap_fa734e62-ea3c-4f84-9409-dd4bb46049ee rr:predicateObjectMap km-dev:PredicateObjectMap_11a31e92-1236-44cb-aec3-504d5a8165c2 .
 
-km-dev:PredicateObjectMap_61814aa3-70e2-4dd7-91a4-2b213a437898 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:PredicateObjectMap_11a31e92-1236-44cb-aec3-504d5a8165c2 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_61814aa3-70e2-4dd7-91a4-2b213a437898 .
+_:node1ca3jc69sx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_11a31e92-1236-44cb-aec3-504d5a8165c2 .
 
-km-dev:TriplesMap_d2ea615f-690d-4647-b062-8017f69526fb a rr:TriplesMap .
+km-dev:TriplesMap_aa812cc9-5510-4594-b68b-5e91047b4cee a rr:TriplesMap .
 
-_:node1brvt2odbx1 km-dev:hasTriplesMap km-dev:TriplesMap_d2ea615f-690d-4647-b062-8017f69526fb .
+_:node1ca3jc69sx1 km-dev:hasTriplesMap km-dev:TriplesMap_aa812cc9-5510-4594-b68b-5e91047b4cee .
 
-km-dev:TriplesMap_d2ea615f-690d-4647-b062-8017f69526fb km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:TriplesMap_aa812cc9-5510-4594-b68b-5e91047b4cee km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx17 rr:tableName "NPGObjDimsParsed3.csv" ;
+_:node1ca3jc69sx17 rr:tableName "NPGObjDimsParsed3.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasLogicalTable _:node1brvt2odbx17 .
+_:node1ca3jc69sx1 km-dev:hasLogicalTable _:node1ca3jc69sx17 .
 
-km-dev:TriplesMap_d2ea615f-690d-4647-b062-8017f69526fb rr:logicalTable _:node1brvt2odbx17 ;
-	rr:subjectMap _:node1brvt2odbx18 .
+km-dev:TriplesMap_aa812cc9-5510-4594-b68b-5e91047b4cee rr:logicalTable _:node1ca3jc69sx17 ;
+	rr:subjectMap _:node1ca3jc69sx18 .
 
-_:node1brvt2odbx1 km-dev:hasSubjectMap _:node1brvt2odbx18 .
+_:node1ca3jc69sx1 km-dev:hasSubjectMap _:node1ca3jc69sx18 .
 
-_:node1brvt2odbx18 km-dev:isPartOfMapping _:node1brvt2odbx1 ;
+_:node1ca3jc69sx18 km-dev:isPartOfMapping _:node1ca3jc69sx1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit1" ;
 	rr:class crm:E58_Measurement_Unit ;
 	rr:template "{UnitURI}" .
 
-km-dev:PredicateObjectMap_5bf6dbe6-5a0a-46ed-be28-2baafea0075a rr:predicate skos:prefLabel .
+km-dev:PredicateObjectMap_25d49942-49cf-4f25-8a85-13fab4e733e0 rr:predicate skos:prefLabel .
 
-_:node1brvt2odbx19 rr:column "PrimaryUnitID" ;
+_:node1ca3jc69sx19 rr:column "PrimaryUnitID" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasObjectMap _:node1brvt2odbx19 .
+_:node1ca3jc69sx1 km-dev:hasObjectMap _:node1ca3jc69sx19 .
 
-km-dev:PredicateObjectMap_5bf6dbe6-5a0a-46ed-be28-2baafea0075a rr:objectMap _:node1brvt2odbx19 .
+km-dev:PredicateObjectMap_25d49942-49cf-4f25-8a85-13fab4e733e0 rr:objectMap _:node1ca3jc69sx19 .
 
-km-dev:TriplesMap_d2ea615f-690d-4647-b062-8017f69526fb rr:predicateObjectMap km-dev:PredicateObjectMap_5bf6dbe6-5a0a-46ed-be28-2baafea0075a .
+km-dev:TriplesMap_aa812cc9-5510-4594-b68b-5e91047b4cee rr:predicateObjectMap km-dev:PredicateObjectMap_25d49942-49cf-4f25-8a85-13fab4e733e0 .
 
-km-dev:PredicateObjectMap_5bf6dbe6-5a0a-46ed-be28-2baafea0075a a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1brvt2odbx1 .
+km-dev:PredicateObjectMap_25d49942-49cf-4f25-8a85-13fab4e733e0 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ca3jc69sx1 .
 
-_:node1brvt2odbx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_5bf6dbe6-5a0a-46ed-be28-2baafea0075a .
+_:node1ca3jc69sx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_25d49942-49cf-4f25-8a85-13fab4e733e0 .
