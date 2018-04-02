@@ -31,7 +31,7 @@ return UM.uri_from_fields(getValue("ObjectURI")+"/",getValue("Element"))
 #### _DimensionURI_
 From column: _DimensionID_
 ``` python
-return getValue("PartURI")+"/dimension/"+getValue("DimensionID")
+return getValue("PartURI")+"/dimension/"+getValue("DimensionID") + ""
 ```
 
 #### _DimensionTypeURI_
